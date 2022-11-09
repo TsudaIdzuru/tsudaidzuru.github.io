@@ -1,7 +1,7 @@
 ---
 title: "New Recuits Gacha Game"
 date: 2022-10-10T21:57:26+09:00
-draft: true
+draft: false
 ---
 
 # 配属ガチャ
