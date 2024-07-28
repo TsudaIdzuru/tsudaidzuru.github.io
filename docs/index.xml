@@ -6,7 +6,17 @@
     <description>Recent content on A blog by a not-so-young man working for the Japanese electronics industry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 10 Oct 2022 21:57:26 +0900</lastBuildDate><atom:link href="https://tsudaidzuru.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jul 2024 15:30:45 +0900</lastBuildDate><atom:link href="https://tsudaidzuru.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>20240728_dassl</title>
+      <link>https://tsudaidzuru.github.io/posts/20240728_dassl/</link>
+      <pubDate>Sun, 28 Jul 2024 15:30:45 +0900</pubDate>
+      
+      <guid>https://tsudaidzuru.github.io/posts/20240728_dassl/</guid>
+      <description>DASSL is one of the most successful simulation codes on the market today. It implements the BDF formulae of orders one to five in their DAE format, as presented earlier in this chapter. DASSL is a variable-step, variable- order code that uses order buildup during the startup period. The code was written by Linda Petzold [8.4, 8.34].
+The code has meanwhile been made the default simulator in Dymola. [8.9, 8.</description>
+    </item>
+    
     <item>
       <title>New Recruits Gacha Game</title>
       <link>https://tsudaidzuru.github.io/posts/new-recuits-gacha-game/</link>
