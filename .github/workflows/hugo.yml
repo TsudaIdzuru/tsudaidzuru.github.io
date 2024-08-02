@@ -72,3 +72,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
+debug:
+  - name: Debug Info
+    run: |
+      hugo version
+      ls -R content/
+      cat config.toml
+      env | grep HUGO
+
+  - name: List Build Output
+    run: ls -R public/
