@@ -1,12 +1,60 @@
-baseURL = 'https://tsudaidzuru.github.io'
-languageCode = 'ja-jp'
-title = 'A blog by a not-so-young man working for the Japanese electronics industry'
-author = 'Tsuda Idzuru'
-theme = 'Diary'
+baseURL = "https://tsudaidzuru.github.io/"
+languageCode = "ja-jp"
+defaultContentLanguage = "ja"
+title = "A blog by a not-so-young man working for the Japanese electronics industry"
+theme = "Diary"
+
+# ビルド設定
 publishDir = "docs"
-HasCJKLanguage = true
 enableRobotsTXT = true
 
+# 言語設定
+hasCJKLanguage = true
 
-[Author]
+# 著者情報
+[author]
+  name = "Tsuda Idzuru"
+
+# サイトパラメータ
+[params]
+  description = "日本の電機産業で働く中年男性のブログ"
+  images = ["img/og-image.jpg"]  # OGP画像（必要に応じて追加）
+  dateFormat = "2006年01月02日"
+
+# ソーシャルメディア設定
+[params.social]
   twitter = "TsudaIdzuru"
+
+# メニュー設定
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+# プライバシーとGDPR設定
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# 出力設定
+[outputs]
+  home = ["HTML", "RSS"]
+
+# マークダウン設定
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    unsafe = true
