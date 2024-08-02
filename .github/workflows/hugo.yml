@@ -14,33 +14,68 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.128.0
     steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          echo "Hugo version:"
+          hugo version
+
+      - name: Install Dart Sass
+        run: |
+          sudo snap install dart-sass
+          echo "Dart Sass version:"
+          dart-sass --version
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: gohugoio/hugo-setup@v1
-        with:
-          hugo-version: 'latest'
-          extended: true
+      - name: List repository contents
+        run: |
+          echo "Repository contents:"
+          ls -R
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install Node.js dependencies
+        run: |
+          if [[ -f package-lock.json || -f npm-shrinkwrap.json ]]; then
+            npm ci
+            echo "Node.js dependencies installed"
+          else
+            echo "No Node.js dependencies to install"
+          fi
 
       - name: Build with Hugo
         env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
         run: |
-          hugo --minify
-          echo "Build completed"
+          echo "Starting Hugo build..."
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --verbose
+          echo "Hugo build completed"
+          echo "Contents of public directory:"
           ls -R public
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
@@ -53,4 +88,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
