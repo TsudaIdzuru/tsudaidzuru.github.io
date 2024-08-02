@@ -1,5 +1,12 @@
 baseURL = 'https://tsudaidzuru.github.io'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'ja-jp'
+title = 'A blog by a not-so-young man working for the Japanese electronics industry'
+author = 'Tsuda Idzuru'
 theme = 'Diary'
 publishDir = "docs"
+HasCJKLanguage = true
+enableRobotsTXT = true
+
+
+[Author]
+  twitter = "TsudaIdzuru"

@@ -69,15 +69,14 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --verbose
+            --logLevel info
           echo "Hugo build completed"
           echo "Contents of public directory:"
           ls -R public
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                path: ./public
 
   deploy:
     environment:
