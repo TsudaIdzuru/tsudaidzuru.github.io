@@ -14,44 +14,28 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.111.3
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: gohugoio/hugo-setup@v1
         with:
-          hugo-version: '${HUGO_VERSION}'
+          hugo-version: 'latest'
           extended: true
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
-      - name: List directory contents
-        run: ls -R
-        
-      - name: Check Hugo version
-        run: hugo version
 
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo --minify
           echo "Build completed"
           ls -R public
 
