@@ -1,7 +1,7 @@
 ---
 title: "This is what I want to do"
 date: 2022-10-10T21:27:17+09:00
-draft: false
+draft: true 
 ---
 
 # 自己紹介

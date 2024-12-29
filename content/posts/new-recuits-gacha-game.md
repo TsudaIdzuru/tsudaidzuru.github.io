@@ -1,7 +1,7 @@
 ---
 title: "New Recruits Gacha Game"
 date: 2022-10-10T21:57:26+09:00
-draft: false
+draft: true 
 ---
 
 # 配属ガチャ
