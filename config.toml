@@ -1,78 +1,60 @@
-name: Deploy Hugo Site to GitHub Pages
+baseURL = "https://tsudaidzuru.github.io/"
+languageCode = "ja-jp"
+defaultContentLanguage = "ja"
+title = "A blog by a not-so-young man working for the Japanese electronics industry"
+theme = "Diary"
 
-on:
-  push:
-    branches: ["main"]
-  workflow_dispatch:
+# ビルド設定
+publishDir = "docs"
+enableRobotsTXT = true
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# 言語設定
+hasCJKLanguage = true
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+# 著者情報
+[author]
+  name = "Tsuda Idzuru"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      # 1. Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          submodules: true
-          fetch-depth: 0
+# サイトパラメータ
+[params]
+  description = "日本の電機産業で働く中年男性のブログ"
+  images = ["img/og-image.jpg"]  # OGP画像（必要に応じて追加）
+  dateFormat = "2006年01月02日"
 
-      # 2. Set up Pages
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v4
+# ソーシャルメディア設定
+[params.social]
+  twitter = "TsudaIdzuru"
 
-      # 3. Set up Hugo using a dedicated action
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.128.0'      # Specify your desired Hugo version
-          extended: true               # Set to true if you need extended features
+# メニュー設定
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
 
-      # 4. Install Dart Sass (if necessary)
-      #    Consider if you truly need this step; if Sass is managed via Node.js, you might handle it differently
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
+# プライバシーとGDPR設定
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    privacyEnhanced = true
 
-      # 5. Install Node.js dependencies (if applicable)
-      - name: Install Node.js Dependencies
-        run: |
-          if [[ -f package-lock.json || -f npm-shrinkwrap.json ]]; then
-            npm ci
-          fi
+# 出力設定
+[outputs]
+  home = ["HTML", "RSS"]
 
-      # 6. Build the Hugo site
-      - name: Build Site with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-        run: |
-          hugo --minify --baseURL "https://tsudaidzuru.github.io/"
-
-      # 7. (Optional) List generated files for debugging
-      - name: List Generated Files
-        run: ls -R public
-
-      # 8. Upload the generated site as an artifact
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy_pages.outputs.page_url }}
-    steps:
-      # 9. Deploy the artifact to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deploy_pages
-        uses: actions/deploy-pages@v4
+# マークダウン設定
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    unsafe = true
