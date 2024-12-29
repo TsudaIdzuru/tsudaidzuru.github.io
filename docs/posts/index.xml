@@ -2,32 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on A blog by a not-so-young man working for the Japanese electronics industry</title>
-    <link>http://localhost:56160/posts/</link>
+    <link>https://tsudaidzuru.github.io/posts/</link>
     <description>Recent content in Posts on A blog by a not-so-young man working for the Japanese electronics industry</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 28 Jul 2024 15:30:45 +0900</lastBuildDate>
-    <atom:link href="http://localhost:56160/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>20240728_dassl</title>
-      <link>http://localhost:56160/posts/20240728_dassl/</link>
-      <pubDate>Sun, 28 Jul 2024 15:30:45 +0900</pubDate>
-      <guid>http://localhost:56160/posts/20240728_dassl/</guid>
-      <description>DASSL is one of the most successful simulation codes on the market today. It implements the BDF formulae of orders one to five in their DAE format, as presented earlier in this chapter. DASSL is a variable-step, variable- order code that uses order buildup during the startup period. The code was written by Linda Petzold [8.4, 8.34].&#xA;The code has meanwhile been made the default simulator in Dymola. [8.9, 8.</description>
-    </item>
-    <item>
-      <title>New Recruits Gacha Game</title>
-      <link>http://localhost:56160/posts/new-recuits-gacha-game/</link>
-      <pubDate>Mon, 10 Oct 2022 21:57:26 +0900</pubDate>
-      <guid>http://localhost:56160/posts/new-recuits-gacha-game/</guid>
-      <description>配属ガチャ 日本の企業においては、新卒採用が普通です。 その後の職歴（キャリア）に大きく影響するのが配属先です。 職歴は、入社時に与えられた仕事か</description>
-    </item>
-    <item>
-      <title>This is what I want to do</title>
-      <link>http://localhost:56160/posts/my-first-post/</link>
-      <pubDate>Mon, 10 Oct 2022 21:27:17 +0900</pubDate>
-      <guid>http://localhost:56160/posts/my-first-post/</guid>
-      <description>自己紹介 こんにちは、津田と言うものです。 日本の総合電機メーカーで15年ほど働いています。 このブログでは、日本の総合電機メーカーの生態について</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://tsudaidzuru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,10 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on A blog by a not-so-young man working for the Japanese electronics industry</title>
-    <link>http://localhost:56160/categories/</link>
+    <link>https://tsudaidzuru.github.io/categories/</link>
     <description>Recent content in Categories on A blog by a not-so-young man working for the Japanese electronics industry</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <atom:link href="http://localhost:56160/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tsudaidzuru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CAE</title>
+      <link>https://tsudaidzuru.github.io/categories/cae/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tsudaidzuru.github.io/categories/cae/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CFD</title>
+      <link>https://tsudaidzuru.github.io/categories/cfd/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tsudaidzuru.github.io/categories/cfd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://tsudaidzuru.github.io/categories/devops/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tsudaidzuru.github.io/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Manufacturing</title>
+      <link>https://tsudaidzuru.github.io/categories/manufacturing/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tsudaidzuru.github.io/categories/manufacturing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MLOps</title>
+      <link>https://tsudaidzuru.github.io/categories/mlops/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tsudaidzuru.github.io/categories/mlops/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

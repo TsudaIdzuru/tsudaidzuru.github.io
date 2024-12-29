@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing | A blog by a not-so-young man working for the Japanese electronics industry</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:
+Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?
+I am interested in continuously and efficiently comparing data, simulation results, and actual machine experiments within the manufacturer’s development department.">
+    <meta name="generator" content="Hugo 0.130.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:url" content="https://tsudaidzuru.github.io/tech/devops_for_cfd/">
+  <meta property="og:site_name" content="A blog by a not-so-young man working for the Japanese electronics industry">
+  <meta property="og:title" content="Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing">
+  <meta property="og:description" content="Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:
+Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?
+I am interested in continuously and efficiently comparing data, simulation results, and actual machine experiments within the manufacturer’s development department.">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tech">
+    <meta property="article:published_time" content="2024-12-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-29T00:00:00+00:00">
+    <meta property="article:tag" content="DevOps">
+    <meta property="article:tag" content="MLOps">
+    <meta property="article:tag" content="CAE">
+    <meta property="article:tag" content="CFD">
+    <meta property="article:tag" content="Simulation">
+    <meta property="article:tag" content="Automotive">
+    <meta property="og:image" content="https://tsudaidzuru.github.io/img/og-image.jpg">
+
+  <meta itemprop="name" content="Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing">
+  <meta itemprop="description" content="Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:
+Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?
+I am interested in continuously and efficiently comparing data, simulation results, and actual machine experiments within the manufacturer’s development department.">
+  <meta itemprop="datePublished" content="2024-12-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="2269">
+  <meta itemprop="image" content="https://tsudaidzuru.github.io/img/og-image.jpg">
+  <meta itemprop="keywords" content="DevOps,MLOps,CAE,CFD,Simulation,Automotive">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tsudaidzuru.github.io/img/og-image.jpg">
+  <meta name="twitter:title" content="Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing">
+  <meta name="twitter:description" content="Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:
+Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?
+I am interested in continuously and efficiently comparing data, simulation results, and actual machine experiments within the manufacturer’s development department.">
+      <meta name="twitter:site" content="@TsudaIdzuru">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        A blog by a not-so-young man working for the Japanese electronics industry
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home ページ">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts ページ">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tech/" title="Tech ページ">
+              Tech
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About ページ">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        TECHES
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing</h1>
+      
+      <p class="tracked">
+         <strong>Your Name</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-12-29T00:00:00Z">12月 29, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="introduction">Introduction</h2>
+<p>In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:</p>
+<blockquote>
+<p><strong>Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?</strong><br>
+<em>I am interested in continuously and efficiently comparing data, simulation results, and actual machine experiments within the manufacturer’s development department. While CAE and CFD require substantial computational resources, unlike machine learning projects, they necessitate the creation of computational meshes and the processing of CAD data. Therefore, the MLOps approach cannot be directly applied to CAE or CFD as it is currently implemented. Are there any examples of companies that have successfully implemented DevOps and MLOps methodologies in conjunction with CAE or CFD? Specifically, I am interested in learning about large companies with a high demand for CAE, such as Toyota and Volkswagen, and how they have managed to leverage DevOps and MLOps to enhance their CAE workflows.</em>*</p>
+</blockquote>
+<p>To address this inquiry, a comprehensive report delves into the integration of DevOps and MLOps within CAE and CFD workflows, highlighting benefits, challenges, and real-world applications.</p>
+<h2 id="devops-and-mlops-for-cfd-and-cae-a-deep-dive">DevOps and MLOps for CFD and CAE: A Deep Dive</h2>
+<p>The global Computer-Aided Engineering (CAE) market is witnessing significant growth, projected to reach nearly $11,251.71 million by 2027 with a compound annual growth rate (CAGR) of 6.64%<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. This surge is driven by the escalating demand for simulation-driven product development across diverse industries such as automotive, aerospace, and manufacturing. CAE technologies, including Computational Fluid Dynamics (CFD) and Finite Element Analysis (FEA), empower engineers to model and analyze complex systems, optimize designs, and predict product behavior prior to the creation of physical prototypes.</p>
+<h3 id="the-role-of-devops-and-mlops">The Role of DevOps and MLOps</h3>
+<p>As simulations grow more complex and iteration cycles become faster, efficient workflows become paramount. DevOps, a blend of software development (Dev) and IT operations (Ops), aims to shorten the systems development life cycle and deliver continuous delivery with high software quality<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. MLOps extends these principles to the machine learning lifecycle, encompassing data preparation, model development, deployment, and monitoring<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. While traditionally associated with machine learning, the principles of MLOps can be adapted to enhance CFD and CAE workflows.</p>
+<h3 id="accessibility-of-high-performance-computing-hpc">Accessibility of High-Performance Computing (HPC)</h3>
+<p>The rise of cloud computing and container technologies has significantly increased the accessibility of High-Performance Computing (HPC) resources<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. Cloud-based HPC solutions eliminate the necessity for costly hardware and software investments, enabling even smaller companies to harness the power of CAE and CFD. This democratization underscores the importance of efficient workflows and methodologies like DevOps and MLOps to manage and optimize these resources effectively.</p>
+<h2 id="devops-for-cae">DevOps for CAE</h2>
+<p>Implementing DevOps practices within CAE can lead to improved collaboration, automated workflows, and accelerated simulation processes. Key applications include:</p>
+<h3 id="version-control-for-cae-models">Version Control for CAE Models</h3>
+<p>Utilizing version control systems such as Git allows for tracking changes to simulation models, input files, and results. This practice ensures reproducibility, facilitates collaboration, and enables easy rollback to previous versions when necessary<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h3 id="continuous-integration-for-simulation-workflows">Continuous Integration for Simulation Workflows</h3>
+<p>Automating the build and execution of simulations through continuous integration enables engineers to swiftly identify and rectify errors, ensuring that only validated models proceed to further analysis. Platforms like Azure DevOps offer robust support for implementing continuous integration in CAE environments<sup id="fnref2:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h3 id="automated-testing-in-cae">Automated Testing in CAE</h3>
+<p>Automated testing frameworks validate simulation results against predefined criteria, ensuring accuracy and reliability<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. This encompasses unit tests for individual components, integration tests for component interactions, and system-level tests for overall simulation behavior.</p>
+<h3 id="continuous-deployment-of-cae-results">Continuous Deployment of CAE Results</h3>
+<p>Automating the deployment of simulation models and results to stakeholders accelerates decision-making and reduces time-to-market<sup id="fnref1:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. This may involve generating and distributing reports, visualizations, and other relevant documentation to engineers, designers, and decision-makers.</p>
+<h3 id="application-mocks-in-cae">Application Mocks in CAE</h3>
+<p>Companies like DocuSign employ application mocks to simulate real-world scenarios and test their CAE applications in controlled environments<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>. This approach allows for thorough testing and validation of simulation models before deployment, mitigating the risk of errors and enhancing result reliability.</p>
+<p><strong>Key Insight:</strong> Continuous monitoring and feedback are crucial in DevOps for CAE. Monitoring simulation performance and gathering stakeholder feedback enable engineers to identify and address issues early, resulting in significant cost and time savings<sup id="fnref2:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<h2 id="mlops-for-cfd">MLOps for CFD</h2>
+<p>Although MLOps cannot be directly applied to CFD as it is for machine learning projects, its principles can be tailored to address specific CFD workflow challenges:</p>
+<h3 id="data-management-in-cfd">Data Management in CFD</h3>
+<p>MLOps tools facilitate the management and versioning of extensive CFD datasets, including simulation results, experimental data, and CAD models. This ensures data integrity and promotes efficient data sharing and collaboration<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>. Tools like MLflow and DVC offer functionalities for data versioning, tracking, and management, fostering reproducibility in CFD projects.</p>
+<h3 id="pipeline-automation-for-cfd-workflows">Pipeline Automation for CFD Workflows</h3>
+<p>Adapting MLOps pipelines to automate CFD workflows—such as mesh generation, solver execution, and post-processing—can significantly reduce manual efforts and expedite simulation turnaround times<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>.</p>
+<h3 id="model-versioning-in-cfd">Model Versioning in CFD</h3>
+<p>Tracking different versions of CFD models and their parameters using MLOps tools ensures reproducibility and facilitates model comparison and optimization<sup id="fnref1:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
+<h3 id="monitoring-and-optimization-of-cfd-simulations">Monitoring and Optimization of CFD Simulations</h3>
+<p>MLOps monitoring tools can track CFD simulation performance, identify bottlenecks, and optimize resource allocation<sup id="fnref1:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>.</p>
+<h3 id="addressing-mlops-challenges-in-cfd">Addressing MLOps Challenges in CFD</h3>
+<p>Applying MLOps to CFD introduces unique challenges, including inefficiencies in existing tools and infrastructure for managing CFD simulations<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>, and inadequate model versioning capabilities for CFD models, which can impede reproducibility and collaboration<sup id="fnref1:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>.</p>
+<h3 id="nvidia-modulus-for-cfd">NVIDIA Modulus for CFD</h3>
+<p>NVIDIA Modulus, an open-source framework, is designed for building, training, and fine-tuning physics-informed machine learning models for CFD simulations<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>. It offers optimized implementations of various ML algorithms, enabling the creation of AI surrogates that augment traditional numerical simulations, enhancing both accuracy and efficiency.</p>
+<p><strong>Key Insight:</strong> Scaling MLOps for CFD workflows is challenging due to the complexity of CFD data and the substantial computational resources required<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>. Effective data management, efficient pipeline automation, and robust model versioning are essential for overcoming these challenges and ensuring scalability.</p>
+<h2 id="benefits-of-devops-and-mlops-for-cae-and-cfd">Benefits of DevOps and MLOps for CAE and CFD</h2>
+<p>Implementing DevOps and MLOps principles in CAE and CFD workflows offers numerous benefits:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Benefit</strong></th>
+<th><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Increased Efficiency</strong></td>
+<td>Automation of tasks such as mesh generation, simulation execution, and result analysis allows engineers to focus on more complex and creative tasks<sup id="fnref:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Improved Collaboration</strong></td>
+<td>DevOps and MLOps foster collaboration among different teams involved in the simulation process, enhancing communication and speeding up problem-solving<sup id="fnref1:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Faster Iteration Cycles</strong></td>
+<td>Continuous integration and deployment reduce the time required to run simulations and analyze results, enabling quicker iteration cycles and product development<sup id="fnref2:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Enhanced Quality</strong></td>
+<td>Automated testing and monitoring ensure the accuracy and reliability of simulation results, leading to better design decisions and improved product quality<sup id="fnref3:13"><a href="#fn:13" class="footnote-ref" role="doc-noteref">13</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Reduced Costs</strong></td>
+<td>Optimizing resource allocation and minimizing manual effort help lower the overall cost of CAE and CFD simulations<sup id="fnref:14"><a href="#fn:14" class="footnote-ref" role="doc-noteref">14</a></sup>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Insight:</strong> The growing accessibility of HPC resources via cloud computing is a major driver for adopting DevOps and MLOps in CAE and CFD. These methodologies provide a framework for managing and optimizing cloud-based HPC environments, facilitating efficient and cost-effective simulation workflows.</p>
+<h2 id="challenges-of-devops-and-mlops-for-cae-and-cfd">Challenges of DevOps and MLOps for CAE and CFD</h2>
+<p>Despite the clear benefits, integrating DevOps and MLOps into CAE and CFD workflows presents several challenges:</p>
+<ul>
+<li>
+<p><strong>Legacy Systems:</strong> Integrating with existing legacy CAE and CFD software can be complex and resource-intensive<sup id="fnref:15"><a href="#fn:15" class="footnote-ref" role="doc-noteref">15</a></sup>. Older software may lack well-defined APIs or support modern data formats, complicating integration with DevOps and MLOps tools.</p>
+</li>
+<li>
+<p><strong>Data Security:</strong> Protecting sensitive simulation data is paramount, especially when utilizing cloud-based DevOps and MLOps platforms<sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">16</a></sup>. Implementing robust security measures—such as encryption, access control, and regular security audits—is essential.</p>
+</li>
+<li>
+<p><strong>Skills Gap:</strong> Successful implementation of DevOps and MLOps requires specialized skills and knowledge<sup id="fnref1:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>. Companies may need to invest in training programs or hire specialists to bridge the skills gap and ensure effective integration.</p>
+</li>
+</ul>
+<h2 id="companies-implementing-devops-and-mlops-in-cae-and-cfd">Companies Implementing DevOps and MLOps in CAE and CFD</h2>
+<p>Several organizations across various industries have successfully integrated DevOps and MLOps principles to enhance their CAE and CFD workflows:</p>
+<ul>
+<li>
+<p><strong>Amazon:</strong> By adopting DevOps practices, Amazon improved the scalability and maintainability of its e-commerce platform<sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">17</a></sup>. Transitioning from a monolithic architecture to a microservices architecture and implementing continuous integration and delivery enabled faster deployment cycles and improved product quality.</p>
+</li>
+<li>
+<p><strong>Ocado:</strong> As a leading online grocery retailer, Ocado utilizes MLOps to optimize warehouse operations and delivery routes<sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup>.</p>
+</li>
+<li>
+<p><strong>Netflix:</strong> The streaming giant leverages MLOps to personalize content recommendations and enhance user experience<sup id="fnref1:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup>.</p>
+</li>
+</ul>
+<p>While specific case studies on Toyota and Volkswagen&rsquo;s implementation of DevOps and MLOps in CAE were not identified, insights from these examples illustrate how automotive companies can adopt similar approaches to optimize their CAE workflows, streamline product design, and enhance manufacturing processes.</p>
+<h3 id="case-studies-and-industry-examples">Case Studies and Industry Examples</h3>
+<ul>
+<li>
+<p><strong>Daimler Trucks North America (DTNA):</strong> Partnering with IBM, DTNA implemented a predictive maintenance solution powered by IoT and AI-driven analytics<sup id="fnref:19"><a href="#fn:19" class="footnote-ref" role="doc-noteref">19</a></sup>. This integration of vehicle sensor data and historical maintenance records enables the prediction of potential failures, facilitating proactive maintenance and reducing vehicle downtime.</p>
+</li>
+<li>
+<p><strong>Airbnb:</strong> Utilizing AWS technologies, Airbnb manages and processes vast amounts of data for various machine learning applications<sup id="fnref:20"><a href="#fn:20" class="footnote-ref" role="doc-noteref">20</a></sup>. Their data lake approach, combined with tools like Amazon EMR, provides data scientists with access to diverse datasets and facilitates efficient development and deployment of ML models.</p>
+</li>
+</ul>
+<p>These examples demonstrate the versatility and effectiveness of DevOps and MLOps principles in addressing complex engineering challenges across different industries. Automotive companies like Toyota and Volkswagen can adopt similar strategies to enhance their CAE workflows and drive innovation in simulation-driven product development.</p>
+<h2 id="tools-and-technologies-for-devops-and-mlops-in-cae-and-cfd">Tools and Technologies for DevOps and MLOps in CAE and CFD</h2>
+<p>A variety of tools and technologies support the implementation of DevOps and MLOps in CAE and CFD workflows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Tool/Technology</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Version Control</strong></td>
+<td>Git</td>
+<td>Tracks changes to simulation models, input files, and results<sup id="fnref:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Continuous Integration</strong></td>
+<td>Jenkins</td>
+<td>Automates the build and execution of simulations<sup id="fnref1:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Containerization</strong></td>
+<td>Docker</td>
+<td>Packages applications and their dependencies into portable containers<sup id="fnref2:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Container Orchestration</strong></td>
+<td>Kubernetes</td>
+<td>Automates the deployment, scaling, and management of containerized applications<sup id="fnref3:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Configuration Management</strong></td>
+<td>Ansible</td>
+<td>Automates the configuration and management of infrastructure<sup id="fnref4:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Nagios</td>
+<td>Monitors system and application performance<sup id="fnref5:21"><a href="#fn:21" class="footnote-ref" role="doc-noteref">21</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>MLOps Data Management</strong></td>
+<td>MLflow, DVC</td>
+<td>Provides functionalities for data versioning, tracking, and management<sup id="fnref1:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>MLOps Experiment Tracking</strong></td>
+<td>Neptune, Comet</td>
+<td>Tracks and compares different versions of models and experiments<sup id="fnref:22"><a href="#fn:22" class="footnote-ref" role="doc-noteref">22</a></sup>.</td>
+</tr>
+<tr>
+<td><strong>MLOps Model Deployment</strong></td>
+<td>TensorFlow Serving, TorchServe</td>
+<td>Deploys and serves machine learning models<sup id="fnref:23"><a href="#fn:23" class="footnote-ref" role="doc-noteref">23</a></sup>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="future-trends-of-devops-and-mlops-in-cae-and-cfd">Future Trends of DevOps and MLOps in CAE and CFD</h2>
+<p>Emerging trends are shaping the future integration of DevOps and MLOps within CAE and CFD:</p>
+<ul>
+<li>
+<p><strong>AI and ML Integration:</strong> The fusion of AI and ML with DevOps is anticipated to further enhance automation and efficiency in CAE workflows<sup id="fnref:24"><a href="#fn:24" class="footnote-ref" role="doc-noteref">24</a></sup>. AI-driven tools can facilitate predictive analysis, anomaly detection, and automated decision-making, improving the speed and accuracy of simulation processes.</p>
+</li>
+<li>
+<p><strong>DevSecOps:</strong> As data security gains prominence, DevSecOps—integrating security practices throughout the DevOps lifecycle—is becoming crucial for CAE and CFD workflows<sup id="fnref:25"><a href="#fn:25" class="footnote-ref" role="doc-noteref">25</a></sup>. This ensures the confidentiality, integrity, and availability of simulation data.</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>DevOps and MLOps provide a robust framework for optimizing CAE and CFD workflows, enabling faster iteration cycles, improved collaboration, and enhanced simulation quality. Despite challenges related to legacy systems, data security, and skills gaps, the benefits—ranging from increased efficiency to reduced costs—are substantial. As the CAE market continues to expand and HPC resources become more accessible, the adoption of DevOps and MLOps methodologies will be pivotal for companies aiming to stay competitive and drive innovation in simulation-driven product development.</p>
+<h2 id="references">References</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Computer Aided Engineering (CAE) market Growth, Trends, Analysis, And Opportunities To 2032 – The Business Research Company. Retrieved December 29, 2024, from <a href="https://www.thebusinessresearchcompany.com/report/computer-aided-engineering-cae-market">https://www.thebusinessresearchcompany.com/report/computer-aided-engineering-cae-market</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Basic theory and practical methods of DevOps – College of Allied Educators. Retrieved December 29, 2024, from <a href="https://cae.edu.sg/basic-theory-and-practical-methods-of-devops/">https://cae.edu.sg/basic-theory-and-practical-methods-of-devops/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Demystifying Enterprise MLOps | NVIDIA Technical Blog. Retrieved December 29, 2024, from <a href="https://developer.nvidia.com/blog/demystifying-enterprise-mlops/">https://developer.nvidia.com/blog/demystifying-enterprise-mlops/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>Three Top Trends in CAE – Simr Blog. Retrieved December 29, 2024, from <a href="https://blog.simr.com/three-top-trends-in-cae">https://blog.simr.com/three-top-trends-in-cae</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>2024 CAE Community Symposium. Retrieved December 29, 2024, from <a href="https://caecommunity.org/sites/default/files/users/user9780/P1322024%20Yuting%20Zhang%20-%20Watermarked.pdf">https://caecommunity.org/sites/default/files/users/user9780/P1322024%20Yuting%20Zhang%20-%20Watermarked.pdf</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>6 DevOps Case Studies – PagerDuty. Retrieved December 29, 2024, from <a href="https://www.pagerduty.com/blog/devops-case-studies/">https://www.pagerduty.com/blog/devops-case-studies/</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>Open-source Data Lakehouse And MLOps Platform — A Unified Approach To Data Management And Machine Learning – Wajeeh Ul Hassan. Retrieved December 29, 2024, from <a href="https://wajeehulhassan.medium.com/open-source-data-lakehouse-and-mlops-platform-a-unified-approach-to-data-management-and-machine-3b399ce0810c">https://wajeehulhassan.medium.com/open-source-data-lakehouse-and-mlops-platform-a-unified-approach-to-data-management-and-machine-3b399ce0810c</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>Tools and Technologies for MLOps – GainInsights. Retrieved December 29, 2024, from <a href="https://gain-insights.com/resources/blogs/tools-and-technologies-for-mlops/">https://gain-insights.com/resources/blogs/tools-and-technologies-for-mlops/</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>Borrowing from ML – CFD Engine. Retrieved December 29, 2024, from <a href="https://cfdengine.com/newsletter/087/">https://cfdengine.com/newsletter/087/</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>MLOps Challenges and How to Face Them – neptune.ai. Retrieved December 29, 2024, from <a href="https://neptune.ai/blog/mlops-challenges-and-how-to-face-them">https://neptune.ai/blog/mlops-challenges-and-how-to-face-them</a>&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p>Transforming CFD Simulations with ML Using NVIDIA Modulus | NVIDIA Technical Blog. Retrieved December 29, 2024, from <a href="https://developer.nvidia.com/blog/transforming-cfd-simulations-with-ml-using-nvidia-modulus/">https://developer.nvidia.com/blog/transforming-cfd-simulations-with-ml-using-nvidia-modulus/</a>&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p>The Impact of MLOps on Business Transformation – Hyperight. Retrieved December 29, 2024, from <a href="https://hyperight.com/the-impact-of-mlops-on-business-transformation/">https://hyperight.com/the-impact-of-mlops-on-business-transformation/</a>&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:13">
+<p>Top 15 Core Benefits of DevOps | BrowserStack. Retrieved December 29, 2024, from <a href="https://www.browserstack.com/guide/benefits-of-devops">https://www.browserstack.com/guide/benefits-of-devops</a>&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref3:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:14">
+<p>Business Benefits of DevOps: How CI/CD Can Save Your Time and Money – Medium. Retrieved December 29, 2024, from <a href="https://medium.com/@bohdan.vasylkiv/business-benefits-of-devops-how-ci-cd-can-save-your-time-and-money-ffcf469ca3c5">https://medium.com/@bohdan.vasylkiv/business-benefits-of-devops-how-ci-cd-can-save-your-time-and-money-ffcf469ca3c5</a>&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:15">
+<p>9 Significant MLOps Challenges And Lessons Learned – Neurond AI. Retrieved December 29, 2024, from <a href="https://www.neurond.com/blog/mlops-challenges-solutions">https://www.neurond.com/blog/mlops-challenges-solutions</a>&#160;<a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:16">
+<p>MLOps Challenges and How to Overcome Them? – Signity Solutions. Retrieved December 29, 2024, from <a href="https://www.signitysolutions.com/blog/mlops-challenges">https://www.signitysolutions.com/blog/mlops-challenges</a>&#160;<a href="#fnref:16" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:17">
+<p>Top 5 Companies using DevOps in 2025 – All you need to know! – Edureka. Retrieved December 29, 2024, from <a href="https://www.edureka.co/blog/companies-using-devops/">https://www.edureka.co/blog/companies-using-devops/</a>&#160;<a href="#fnref:17" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:18">
+<p>How These 8 Companies Implement MLOps: In-Depth Guide. Retrieved December 29, 2024, from <a href="https://neptune.ai/blog/how-these-8-companies-implement-mlops">https://neptune.ai/blog/how-these-8-companies-implement-mlops</a>&#160;<a href="#fnref:18" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:18" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:19">
+<p>DevOps Case Studies: 5 Real-World Examples with Insights – Invensis Learning. Retrieved December 29, 2024, from <a href="https://www.invensislearning.com/info/devops-case-studies">https://www.invensislearning.com/info/devops-case-studies</a>&#160;<a href="#fnref:19" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:20">
+<p>The 10 Key Pillars of MLOps with 10 Top Company Case Studies | HackerNoon. Retrieved December 29, 2024, from <a href="https://hackernoon.com/the-10-key-pillars-of-mlops-with-10-top-company-case-studies">https://hackernoon.com/the-10-key-pillars-of-mlops-with-10-top-company-case-studies</a>&#160;<a href="#fnref:20" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:21">
+<p>s2-labs.com. Retrieved December 29, 2024, from <a href="https://s2-labs.com/blog/devops-tools-and-technologies/#:~:text=Popular%20tools%20include%20Git%20(version,%2C%20and%20Nagios%20(monitoring).)">https://s2-labs.com/blog/devops-tools-and-technologies/#:~:text=Popular%20tools%20include%20Git%20(version,%2C%20and%20Nagios%20(monitoring).</a>&#160;<a href="#fnref:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref3:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref4:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref5:21" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:22">
+<p>MLOps Landscape in 2024: Top Tools and Platforms. Retrieved December 29, 2024, from <a href="https://neptune.ai/blog/mlops-tools-platforms-landscape">https://neptune.ai/blog/mlops-tools-platforms-landscape</a>&#160;<a href="#fnref:22" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:23">
+<p>25 Top MLOps Tools You Need to Know in 2025 – DataCamp. Retrieved December 29, 2024, from <a href="https://www.datacamp.com/blog/top-mlops-tools">https://www.datacamp.com/blog/top-mlops-tools</a>&#160;<a href="#fnref:23" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:24">
+<p>The Future of DevOps Trends &amp; Predictions for the year 2025 – Qentelli. Retrieved December 29, 2024, from <a href="https://qentelli.com/solutions/thought-leadership/insights/devops-trends">https://qentelli.com/solutions/thought-leadership/insights/devops-trends</a>&#160;<a href="#fnref:24" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:25">
+<p>The Future of DevOps: Latest Trends and Technologies – TechSci Research. Retrieved December 29, 2024, from <a href="https://www.techsciresearch.com/blog/the-future-of-devops-latest-trends-and-technologies/4539.html">https://www.techsciresearch.com/blog/the-future-of-devops-latest-trends-and-technologies/4539.html</a>&#160;<a href="#fnref:25" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/devops/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">DevOps</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/mlops/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">MLOps</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/cae/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">CAE</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/cfd/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">CFD</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/simulation/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Simulation</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/automotive/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Automotive</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://tsudaidzuru.github.io/" >
+    &copy;  A blog by a not-so-young man working for the Japanese electronics industry 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
