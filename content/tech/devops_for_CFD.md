@@ -1,7 +1,7 @@
 ---
 title: "Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing"
 date: 2024-12-29
-author: "Your Name"
+author: "Tsuda Idzuru"
 categories: ["DevOps", "MLOps", "CAE", "CFD", "Manufacturing"]
 tags: ["DevOps", "MLOps", "CAE", "CFD", "simulation", "automotive"]
 draft: false
