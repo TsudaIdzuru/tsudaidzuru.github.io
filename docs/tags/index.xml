@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on A blog by a not-so-young man working for the Japanese electronics industry</title>
-    <link>https://tsudaidzuru.github.io/tags/</link>
+    <link>http://localhost:61579/tags/</link>
     <description>Recent content in Tags on A blog by a not-so-young man working for the Japanese electronics industry</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tsudaidzuru.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61579/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automotive</title>
-      <link>https://tsudaidzuru.github.io/tags/automotive/</link>
+      <link>http://localhost:61579/tags/automotive/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/automotive/</guid>
+      <guid>http://localhost:61579/tags/automotive/</guid>
       <description></description>
     </item>
     <item>
       <title>CAE</title>
-      <link>https://tsudaidzuru.github.io/tags/cae/</link>
+      <link>http://localhost:61579/tags/cae/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/cae/</guid>
+      <guid>http://localhost:61579/tags/cae/</guid>
       <description></description>
     </item>
     <item>
       <title>CFD</title>
-      <link>https://tsudaidzuru.github.io/tags/cfd/</link>
+      <link>http://localhost:61579/tags/cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/cfd/</guid>
+      <guid>http://localhost:61579/tags/cfd/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>https://tsudaidzuru.github.io/tags/devops/</link>
+      <link>http://localhost:61579/tags/devops/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/devops/</guid>
+      <guid>http://localhost:61579/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>MLOps</title>
-      <link>https://tsudaidzuru.github.io/tags/mlops/</link>
+      <link>http://localhost:61579/tags/mlops/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/mlops/</guid>
+      <guid>http://localhost:61579/tags/mlops/</guid>
       <description></description>
     </item>
     <item>
       <title>Simulation</title>
-      <link>https://tsudaidzuru.github.io/tags/simulation/</link>
+      <link>http://localhost:61579/tags/simulation/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/simulation/</guid>
+      <guid>http://localhost:61579/tags/simulation/</guid>
       <description></description>
     </item>
   </channel>
