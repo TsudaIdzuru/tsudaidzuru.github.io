@@ -7,6 +7,8 @@ tags: ["DevOps", "MLOps", "CAE", "CFD", "simulation", "automotive"]
 draft: false
 ---
 
+This article is written by Gemini Deep Research.
+
 ## Introduction
 
 In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:

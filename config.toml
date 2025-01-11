@@ -1,8 +1,8 @@
 baseURL = "https://tsudaidzuru.github.io/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
-title = "A blog by a not-so-young man working for the Japanese electronics industry"
-theme = "Diary"
+title = "Working in Japanese multinational electronics company"
+theme = "Diary" 
 
 # ビルド設定
 publishDir = "docs"
@@ -17,7 +17,7 @@ hasCJKLanguage = true
 
 # サイトパラメータ
 [params]
-  description = "日本の電機産業で働く中年男性のブログ"
+  description = "Working in Japanese multinational electronics company"
   images = ["img/og-image.jpg"]  # OGP画像（必要に応じて追加）
   dateFormat = "2006年01月02日"
 

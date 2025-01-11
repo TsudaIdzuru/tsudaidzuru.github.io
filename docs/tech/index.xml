@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Teches on A blog by a not-so-young man working for the Japanese electronics industry</title>
-    <link>http://localhost:61579/tech/</link>
-    <description>Recent content in Teches on A blog by a not-so-young man working for the Japanese electronics industry</description>
+    <title>Teches on Working in Japanese multinational electronics company</title>
+    <link>https://tsudaidzuru.github.io/tech/</link>
+    <description>Recent content in Teches on Working in Japanese multinational electronics company</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:61579/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jan 2025 16:53:45 +0900</lastBuildDate>
+    <atom:link href="https://tsudaidzuru.github.io/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BEV Battery Simulation Technology: Classification, Issues, and Applications</title>
+      <link>https://tsudaidzuru.github.io/tech/bev_battery_simulation/</link>
+      <pubDate>Sat, 11 Jan 2025 16:53:45 +0900</pubDate>
+      <guid>https://tsudaidzuru.github.io/tech/bev_battery_simulation/</guid>
+      <description>This article is written by Gemini Deep Research. BEV Battery Simulation Technology: Classification, Issues, and Applications Introduction The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However,</description>
+    </item>
     <item>
       <title>Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing</title>
-      <link>http://localhost:61579/tech/devops_for_cfd/</link>
+      <link>https://tsudaidzuru.github.io/tech/devops_for_cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61579/tech/devops_for_cfd/</guid>
-      <description>Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:&#xA;Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?&#xA;I am interested in continuously and efficiently comparing data, simulation results, and actual machine experiments within the manufacturer’s development department.</description>
+      <guid>https://tsudaidzuru.github.io/tech/devops_for_cfd/</guid>
+      <description>This article is written by Gemini Deep Research.&#xA;Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:&#xA;Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?</description>
     </item>
   </channel>
 </rss>

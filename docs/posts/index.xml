@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on A blog by a not-so-young man working for the Japanese electronics industry</title>
-    <link>http://localhost:61579/posts/</link>
-    <description>Recent content in Posts on A blog by a not-so-young man working for the Japanese electronics industry</description>
+    <title>Posts on Working in Japanese multinational electronics company</title>
+    <link>https://tsudaidzuru.github.io/posts/</link>
+    <description>Recent content in Posts on Working in Japanese multinational electronics company</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:61579/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tsudaidzuru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
