@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simulation on Working in Japanese multinational electronics company</title>
-    <link>http://localhost:1313/tags/simulation/</link>
+    <link>https://tsudaidzuru.github.io/tags/simulation/</link>
     <description>Recent content in Simulation on Working in Japanese multinational electronics company</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tsudaidzuru.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing</title>
-      <link>http://localhost:1313/tech/devops_for_cfd/</link>
+      <link>https://tsudaidzuru.github.io/tech/devops_for_cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tech/devops_for_cfd/</guid>
+      <guid>https://tsudaidzuru.github.io/tech/devops_for_cfd/</guid>
       <description>This article is written by Gemini Deep Research.&#xA;Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:&#xA;Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?</description>
     </item>
   </channel>

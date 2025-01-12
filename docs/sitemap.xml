@@ -2,67 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tech/bev_battery_simulation/</loc>
+    <loc>https://tsudaidzuru.github.io/tech/bev_battery_simulation/</loc>
     <lastmod>2025-01-11T16:53:45+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/</loc>
+    <loc>https://tsudaidzuru.github.io/tech/</loc>
     <lastmod>2025-01-11T16:53:45+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://tsudaidzuru.github.io/</loc>
     <lastmod>2025-01-11T16:53:45+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tech/devops_for_cfd/</loc>
+    <loc>https://tsudaidzuru.github.io/tech/devops_for_cfd/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/automotive/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/automotive/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cae/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/cae/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/cae/</loc>
+    <loc>https://tsudaidzuru.github.io/categories/cae/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://tsudaidzuru.github.io/categories/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cfd/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/cfd/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/cfd/</loc>
+    <loc>https://tsudaidzuru.github.io/categories/cfd/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/devops/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/devops/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/devops/</loc>
+    <loc>https://tsudaidzuru.github.io/categories/devops/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/manufacturing/</loc>
+    <loc>https://tsudaidzuru.github.io/categories/manufacturing/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mlops/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/mlops/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/mlops/</loc>
+    <loc>https://tsudaidzuru.github.io/categories/mlops/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/simulation/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/simulation/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://tsudaidzuru.github.io/tags/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/20240728_dassl/</loc>
+    <loc>https://tsudaidzuru.github.io/posts/</loc>
     <lastmod>2024-07-28T15:30:45+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-07-28T15:30:45+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/new-recuits-gacha-game/</loc>
+    <loc>https://tsudaidzuru.github.io/posts/new-recuits-gacha-game/</loc>
     <lastmod>2022-10-10T21:57:26+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>https://tsudaidzuru.github.io/posts/my-first-post/</loc>
     <lastmod>2022-10-10T21:27:17+09:00</lastmod>
   </url>
 </urlset>

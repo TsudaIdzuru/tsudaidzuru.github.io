@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Working in Japanese multinational electronics company</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://tsudaidzuru.github.io/categories/</link>
     <description>Recent content in Categories on Working in Japanese multinational electronics company</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tsudaidzuru.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CAE</title>
-      <link>http://localhost:1313/categories/cae/</link>
+      <link>https://tsudaidzuru.github.io/categories/cae/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/cae/</guid>
+      <guid>https://tsudaidzuru.github.io/categories/cae/</guid>
       <description></description>
     </item>
     <item>
       <title>CFD</title>
-      <link>http://localhost:1313/categories/cfd/</link>
+      <link>https://tsudaidzuru.github.io/categories/cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/cfd/</guid>
+      <guid>https://tsudaidzuru.github.io/categories/cfd/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>http://localhost:1313/categories/devops/</link>
+      <link>https://tsudaidzuru.github.io/categories/devops/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/devops/</guid>
+      <guid>https://tsudaidzuru.github.io/categories/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Manufacturing</title>
-      <link>http://localhost:1313/categories/manufacturing/</link>
+      <link>https://tsudaidzuru.github.io/categories/manufacturing/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/manufacturing/</guid>
+      <guid>https://tsudaidzuru.github.io/categories/manufacturing/</guid>
       <description></description>
     </item>
     <item>
       <title>MLOps</title>
-      <link>http://localhost:1313/categories/mlops/</link>
+      <link>https://tsudaidzuru.github.io/categories/mlops/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/mlops/</guid>
+      <guid>https://tsudaidzuru.github.io/categories/mlops/</guid>
       <description></description>
     </item>
   </channel>
