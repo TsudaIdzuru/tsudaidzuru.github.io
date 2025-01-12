@@ -57,13 +57,13 @@ jobs:
 
       # 7. (Optional) List generated files for debugging
       - name: List Generated Files
-        run: ls -R public
+        run: ls -R docs
 
       # 8. Upload the generated site as an artifact
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./docs
 
   deploy:
     needs: build
