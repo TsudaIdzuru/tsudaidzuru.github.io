@@ -23,6 +23,13 @@
       <description>This article is written by Gemini Deep Research.&#xA;Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:&#xA;Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?</description>
     </item>
     <item>
+      <title>20240728_dassl</title>
+      <link>https://tsudaidzuru.github.io/posts/20240728_dassl/</link>
+      <pubDate>Sun, 28 Jul 2024 15:30:45 +0900</pubDate>
+      <guid>https://tsudaidzuru.github.io/posts/20240728_dassl/</guid>
+      <description>DASSL is one of the most successful simulation codes on the market today. It implements the BDF formulae of orders one to five in their DAE format, as presented earlier in this chapter. DASSL is a variable-step, variable- order code that uses order buildup during the startup period. The code was written by Linda Petzold [8.4, 8.34].&#xA;The code has meanwhile been made the default simulator in Dymola. [8.9, 8.</description>
+    </item>
+    <item>
       <title>配属ガチャ ～新卒が引き当てる運命の一手～</title>
       <link>https://tsudaidzuru.github.io/posts/new-recuits-gacha-game/</link>
       <pubDate>Mon, 10 Oct 2022 21:57:26 +0900</pubDate>
