@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Working in Japanese multinational electronics company</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Working in Japanese multinational electronics company</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>Working in Japanese multinational electronics company</title>
+      <url>http://localhost:1313/img/og-image.jpg</url>
+      <link>http://localhost:1313/img/og-image.jpg</link>
+    </image>
+    <generator>Hugo -- 0.130.0</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 28 Jul 2024 15:30:45 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,8 @@
       <link>http://localhost:1313/posts/20240728_dassl/</link>
       <pubDate>Sun, 28 Jul 2024 15:30:45 +0900</pubDate>
       <guid>http://localhost:1313/posts/20240728_dassl/</guid>
-      <description>DASSL is one of the most successful simulation codes on the market today. It implements the BDF formulae of orders one to five in their DAE format, as presented earlier in this chapter. DASSL is a variable-step, variable- order code that uses order buildup during the startup period. The code was written by Linda Petzold [8.4, 8.34].&#xA;The code has meanwhile been made the default simulator in Dymola. [8.9, 8.</description>
+      <description>DASSL is one of the most successful simulation codes on the market today. It implements the BDF formulae of orders one to five in their DAE format, as presented earlier in this chapter. DASSL is a variable-step, variable- order code that uses order buildup during the startup period. The code was written by Linda Petzold [8.4, 8.34].
+The code has meanwhile been made the default simulator in Dymola. [8.9, 8.</description>
     </item>
     <item>
       <title>配属ガチャ ～新卒が引き当てる運命の一手～</title>

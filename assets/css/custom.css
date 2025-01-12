@@ -1,0 +1,10 @@
+body {
+    font-family: "Merriweather", Georgia, serif;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+  
+  .content {
+    max-width: 700px;
+    margin: 0 auto;
+  }

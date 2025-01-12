@@ -1,70 +1,144 @@
 <!DOCTYPE html>
-<html lang="ja-jp">
+<html lang="ja" dir="auto">
+
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>BEV Battery Simulation Technology: Classification, Issues, and Applications - Working in Japanese multinational electronics company</title>
-<meta name="description" content="Working in Japanese multinational electronics company">
-<meta name="generator" content="Hugo 0.130.0">
-<link href="http://localhost:1313//index.xml" rel="alternate" type="application/rss+xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>BEV Battery Simulation Technology: Classification, Issues, and Applications | Working in Japanese multinational electronics company</title>
+<meta name="keywords" content="">
+<meta name="description" content="This article is written by Gemini Deep Research. BEV Battery Simulation Technology: Classification, Issues, and Applications Introduction The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However,">
+<meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/tech/bev_battery_simulation/">
-<link rel="stylesheet" href="http://localhost:1313/css/theme.min.css">
-<link rel="stylesheet" href="http://localhost:1313/css/chroma.min.css">
-<script defer src="http://localhost:1313//js/fontawesome6/all.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
-<script src="http://localhost:1313/js/bundle.js"></script><style>
-:root {}
-</style>
-<meta property="og:url" content="http://localhost:1313/tech/bev_battery_simulation/">
-  <meta property="og:site_name" content="Working in Japanese multinational electronics company">
-  <meta property="og:title" content="BEV Battery Simulation Technology: Classification, Issues, and Applications">
-  <meta property="og:description" content="This article is written by Gemini Deep Research. BEV Battery Simulation Technology: Classification, Issues, and Applications Introduction The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However,">
-  <meta property="og:locale" content="ja_jp">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="tech">
-    <meta property="article:published_time" content="2025-01-11T16:53:45+09:00">
-    <meta property="article:modified_time" content="2025-01-11T16:53:45+09:00">
-    <meta property="og:image" content="http://localhost:1313/img/og-image.jpg">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/tech/bev_battery_simulation/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/img/og-image.jpg">
-  <meta name="twitter:title" content="BEV Battery Simulation Technology: Classification, Issues, and Applications">
-  <meta name="twitter:description" content="This article is written by Gemini Deep Research. BEV Battery Simulation Technology: Classification, Issues, and Applications Introduction The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However,">
-      <meta name="twitter:site" content="@TsudaIdzuru">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-  <meta itemprop="name" content="BEV Battery Simulation Technology: Classification, Issues, and Applications">
-  <meta itemprop="description" content="This article is written by Gemini Deep Research. BEV Battery Simulation Technology: Classification, Issues, and Applications Introduction The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However,">
-  <meta itemprop="datePublished" content="2025-01-11T16:53:45+09:00">
-  <meta itemprop="dateModified" content="2025-01-11T16:53:45+09:00">
-  <meta itemprop="wordCount" content="3376">
-  <meta itemprop="image" content="http://localhost:1313/img/og-image.jpg"></head>
-<body>
+            .list {
+                background: var(--theme);
+            }
 
-<div class="container"><header>
-<h1>Working in Japanese multinational electronics company</h1>
-<p class="description">Working in Japanese multinational electronics company</p>
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Working in Japanese multinational electronics company (Alt + H)">Working in Japanese multinational electronics company</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tech/" title="Tech">
+                    <span>Tech</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-<div class="global-menu">
-<nav>
-<ul>
-<li class=""><a href="/">Home</a></li>
-<li class=""><a href="/posts/">Posts</a></li>
-<li class=""><a href="/tech/">Tech</a></li>
-<li class=""><a href="/about/">About</a></li></ul>
-</nav>
-</div>
+<main class="main">
 
-<div class="content-container">
-<main><h1>BEV Battery Simulation Technology: Classification, Issues, and Applications</h1>
-<p>This article is written by Gemini Deep Research.</p>
-<h1 id="bev-battery-simulation-technology-classification-issues-and-applications"><strong>BEV Battery Simulation Technology: Classification, Issues, and Applications</strong></h1>
-<h2 id="introduction"><strong>Introduction</strong></h2>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      BEV Battery Simulation Technology: Classification, Issues, and Applications
+    </h1>
+    <div class="post-meta"><span title='2025-01-11 16:53:45 +0900 JST'>2025年01月11日</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>This article is written by Gemini Deep Research.</p>
+<h1 id="bev-battery-simulation-technology-classification-issues-and-applications"><strong>BEV Battery Simulation Technology: Classification, Issues, and Applications</strong><a hidden class="anchor" aria-hidden="true" href="#bev-battery-simulation-technology-classification-issues-and-applications">#</a></h1>
+<h2 id="introduction"><strong>Introduction</strong><a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However, developing such advanced battery technology presents numerous challenges, including achieving range parity with conventional vehicles. Range parity refers to the ability of BEVs to travel a comparable distance on a single charge as gasoline-powered vehicles with a full tank1.</p>
 <p>Battery simulation technology has emerged as a critical tool in addressing these challenges. By enabling engineers to design, analyze, and optimize battery systems in a virtual environment, simulation significantly reduces development time and costs. This is achieved by minimizing the reliance on expensive and time-consuming physical prototypes, allowing for rapid iteration and exploration of different design options2. This report provides a comprehensive overview of BEV battery simulation technology, encompassing its classification, limitations, and applications in the automotive industry.</p>
-<h2 id="classification-of-bev-battery-simulation-technologies"><strong>Classification of BEV Battery Simulation Technologies</strong></h2>
+<h2 id="classification-of-bev-battery-simulation-technologies"><strong>Classification of BEV Battery Simulation Technologies</strong><a hidden class="anchor" aria-hidden="true" href="#classification-of-bev-battery-simulation-technologies">#</a></h2>
 <p>BEV battery simulation technologies can be broadly classified into the following categories:</p>
 <ul>
 <li><strong>Electrochemical Simulation:</strong> This type of simulation delves into the chemical reactions and ion transport within the battery cell. It provides insights into the fundamental electrochemical processes that govern battery performance, such as charge and discharge behavior, capacity fade, and degradation mechanisms4. A key challenge in this area is accurately predicting the current and heat generation inside the battery, which depends on complex factors like electrolyte composition, ion flow, and electrode materials5. Building accurate models for CFD simulations also presents difficulties, especially when simulating battery modules/packs with a large number of cells and intricate cooling passages5.</li>
@@ -82,48 +156,48 @@
 </ul>
 </li>
 </ul>
-<h2 id="limitations-and-challenges-of-bev-battery-simulation-technologies"><strong>Limitations and Challenges of BEV Battery Simulation Technologies</strong></h2>
+<h2 id="limitations-and-challenges-of-bev-battery-simulation-technologies"><strong>Limitations and Challenges of BEV Battery Simulation Technologies</strong><a hidden class="anchor" aria-hidden="true" href="#limitations-and-challenges-of-bev-battery-simulation-technologies">#</a></h2>
 <p>While BEV battery simulation technologies offer significant advantages, they also have limitations and challenges:</p>
-<h3 id="electrochemical-simulation"><strong>Electrochemical Simulation</strong></h3>
+<h3 id="electrochemical-simulation"><strong>Electrochemical Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#electrochemical-simulation">#</a></h3>
 <ul>
 <li>Requires detailed knowledge of battery chemistry and complex mathematical models5.</li>
 <li>Can be computationally expensive, especially for high-fidelity models14.</li>
 <li>May not accurately capture all the complexities of real-world battery behavior15.</li>
 </ul>
-<h3 id="electrical-simulation"><strong>Electrical Simulation</strong></h3>
+<h3 id="electrical-simulation"><strong>Electrical Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#electrical-simulation">#</a></h3>
 <ul>
 <li>May oversimplify the battery&rsquo;s behavior by neglecting complex electrochemical processes15.</li>
 <li>Requires accurate characterization of the battery&rsquo;s electrical parameters16.</li>
 <li>May not accurately predict battery behavior under extreme operating conditions17.</li>
 </ul>
-<h3 id="thermal-simulation"><strong>Thermal Simulation</strong></h3>
+<h3 id="thermal-simulation"><strong>Thermal Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#thermal-simulation">#</a></h3>
 <ul>
 <li>Requires accurate modeling of heat generation and transfer within the battery pack18.</li>
 <li>Can be challenging to capture the dynamic thermal behavior of the battery during fast charging and discharging19.</li>
 <li>May not accurately predict thermal runaway events, which are a major safety concern3. This highlights the importance of simulation in ensuring battery safety.</li>
 </ul>
-<h3 id="mechanical-simulation"><strong>Mechanical Simulation</strong></h3>
+<h3 id="mechanical-simulation"><strong>Mechanical Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#mechanical-simulation">#</a></h3>
 <ul>
 <li>Requires accurate material properties and complex finite element models17.</li>
 <li>Can be challenging to simulate the behavior of battery components under extreme mechanical loads20.</li>
 <li>May not accurately predict battery failure mechanisms21.</li>
 </ul>
-<h3 id="multiphysics-simulation"><strong>Multiphysics Simulation</strong></h3>
+<h3 id="multiphysics-simulation"><strong>Multiphysics Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#multiphysics-simulation">#</a></h3>
 <ul>
 <li>Can be computationally expensive and require specialized software tools20.</li>
 <li>Requires careful consideration of the coupling between different physical phenomena22.</li>
 <li>May not accurately capture all the interactions between different physics23.</li>
 </ul>
-<h3 id="data-driven-simulation"><strong>Data-Driven Simulation</strong></h3>
+<h3 id="data-driven-simulation"><strong>Data-Driven Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#data-driven-simulation">#</a></h3>
 <ul>
 <li>Requires large amounts of high-quality data for training and validation24.</li>
 <li>May not be generalizable to different battery chemistries or operating conditions25.</li>
 <li>Can be challenging to interpret the results and understand the underlying physical mechanisms26.</li>
 </ul>
-<h2 id="thermal-management-in-bev-battery-simulation"><strong>Thermal Management in BEV Battery Simulation</strong></h2>
+<h2 id="thermal-management-in-bev-battery-simulation"><strong>Thermal Management in BEV Battery Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#thermal-management-in-bev-battery-simulation">#</a></h2>
 <p>Thermal management is a critical aspect of BEV battery design and operation. Maintaining the battery within its optimal temperature range is crucial for ensuring safety, performance, and longevity. Simulation plays a vital role in analyzing and optimizing thermal behavior, helping engineers design effective cooling and heating systems for battery packs.</p>
 <p>Thermal simulation techniques are used to model heat generation and transfer within the battery pack, considering factors such as cell chemistry, pack geometry, and cooling strategies. These simulations help identify potential hotspots and optimize the design of cooling components like cold plates and heat sinks.</p>
-<h2 id="companies-using-bev-battery-simulation"><strong>Companies Using BEV Battery Simulation</strong></h2>
+<h2 id="companies-using-bev-battery-simulation"><strong>Companies Using BEV Battery Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#companies-using-bev-battery-simulation">#</a></h2>
 <p>Many companies in the automotive industry are using BEV battery simulation to accelerate the development of advanced battery technology. Some notable examples include:</p>
 <ul>
 <li><strong>Tesla:</strong> Employs electrochemical, thermal, and mechanical simulation for battery design and optimization. For instance, they utilize thermal simulation to design efficient cooling systems for their high-performance battery packs, ensuring optimal temperature regulation during operation27.</li>
@@ -145,13 +219,13 @@
 <li><strong>SK Innovation:</strong> Employs electrochemical and thermal simulation for battery cell and pack development. This approach helps them design high-performance battery cells and packs that offer fast charging capabilities and long lifespans43.</li>
 <li><strong>Panasonic:</strong> Employs multiphysics simulation for battery pack design and thermal management. This approach allows them to design battery packs that are optimized for various vehicle applications, ensuring optimal performance and efficiency44.</li>
 </ul>
-<h3 id="applications-of-bev-battery-simulation"><strong>Applications of BEV Battery Simulation</strong></h3>
+<h3 id="applications-of-bev-battery-simulation"><strong>Applications of BEV Battery Simulation</strong><a hidden class="anchor" aria-hidden="true" href="#applications-of-bev-battery-simulation">#</a></h3>
 <p>In addition to the examples above, BEV battery simulation is used in various applications, including:</p>
 <ul>
 <li><strong>Battery Interconnect Design:</strong> Companies like ARaymond utilize simulation to design and validate battery interconnects for high power capacity and safety. This ensures that the interconnects can handle the high currents and voltages present in modern EVs, while minimizing the risk of electrical failures45.</li>
 <li><strong>Battery Crush Test Simulation:</strong> Companies like Altair use simulation to predict mechanical damage and thermal runaway in battery crush tests. This helps ensure compliance with safety regulations and optimize battery pack designs for crashworthiness46.</li>
 </ul>
-<h2 id="future-trends-in-bev-battery-simulation-technology"><strong>Future Trends in BEV Battery Simulation Technology</strong></h2>
+<h2 id="future-trends-in-bev-battery-simulation-technology"><strong>Future Trends in BEV Battery Simulation Technology</strong><a hidden class="anchor" aria-hidden="true" href="#future-trends-in-bev-battery-simulation-technology">#</a></h2>
 <p>The future of BEV battery simulation technology is poised for significant advancements driven by several key trends:</p>
 <table>
 <thead>
@@ -184,9 +258,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<h2 id="conclusion"><strong>Conclusion</strong><a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>BEV battery simulation technology is an indispensable tool for developing advanced battery systems that meet the evolving needs of the automotive industry. By empowering engineers to analyze and optimize battery performance, safety, and longevity, simulation accelerates the development process and reduces reliance on costly physical prototypes. As the technology continues to evolve, it will play an even more critical role in driving the transition to electric mobility and achieving a sustainable transportation future.</p>
-<h4 id="引用文献"><strong>引用文献</strong></h4>
+<h4 id="引用文献"><strong>引用文献</strong><a hidden class="anchor" aria-hidden="true" href="#引用文献">#</a></h4>
 <p>1. Electric vehicle battery - Wikipedia, 1月 11, 2025にアクセス、 <a href="https://en.wikipedia.org/wiki/Electric_vehicle_battery">https://en.wikipedia.org/wiki/Electric_vehicle_battery</a><br>
 2. Electric Vehicle Battery Test Systems | High Voltage Battery Tester - Dyno One, 1月 11, 2025にアクセス、 <a href="https://www.dyno-one.com/products/electric-vehicle-battery-test-systems/">https://www.dyno-one.com/products/electric-vehicle-battery-test-systems/</a><br>
 3. Battery Pack Thermal Management: Can Simulations Prevent Performance Issues?, 1月 11, 2025にアクセス、 <a href="https://mechartes.com/resources/battery-pack-thermal-management-can-simulations-prevent-performance-issues/">https://mechartes.com/resources/battery-pack-thermal-management-can-simulations-prevent-performance-issues/</a><br>
@@ -237,33 +311,86 @@
 48. OPmobility at CES 2025 - Embracing the future of mobility thanks to Artificial Intelligence &amp; High technology, 1月 11, 2025にアクセス、 <a href="https://www.opmobility.com/wp-content/uploads/2025/01/opmobility-presskit-at-the-ces-2025-embracing-the-future-of-mobility-thanks-to-artificial-iIntelligence-and-high-technology-20250107.pdf">https://www.opmobility.com/wp-content/uploads/2025/01/opmobility-presskit-at-the-ces-2025-embracing-the-future-of-mobility-thanks-to-artificial-iIntelligence-and-high-technology-20250107.pdf</a><br>
 49. What to Expect From EV Batteries in 2024 - Engineering.com, 1月 11, 2025にアクセス、 <a href="https://www.engineering.com/what-to-expect-from-ev-batteries-in-2024/">https://www.engineering.com/what-to-expect-from-ev-batteries-in-2024/</a><br>
 50. The Future of EV Batteries - GreenCars, 1月 11, 2025にアクセス、 <a href="https://www.greencars.com/greencars-101/the-future-of-ev-batteries">https://www.greencars.com/greencars-101/the-future-of-ev-batteries</a></p>
-<div class="edit-meta">
-Last updated on 2025年01月11日
 
 
-<br>
-Published on 2025年01月11日
-<br></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/tech/" title="Teches"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Teches</a>
-<a class="nav nav-next" href="http://localhost:1313/tech/devops_for_cfd/" title="Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing">Next - Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Working in Japanese multinational electronics company</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-</main>
-<div class="sidebar">
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-<div class="sidebar-footer"></div>
-</div>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-</div><a href="#" id="backtothetop-fixed" class="backtothetop"
- data-backtothetop-duration="600"
- data-backtothetop-easing="easeOutQuart"
- data-backtothetop-fixed-fadeIn="1000"
- data-backtothetop-fixed-fadeOut="1000"
- data-backtothetop-fixed-bottom="10"
- data-backtothetop-fixed-right="20">
-<span class="fa-layers fa-fw">
-<i class="fas fa-circle"></i>
-<i class="fas fa-arrow-circle-up"></i>
-</span></a>
-</div>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

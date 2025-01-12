@@ -2,7 +2,7 @@ baseURL = "https://tsudaidzuru.github.io/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
 title = "Working in Japanese multinational electronics company"
-theme = "hugo-theme-techdoc" 
+theme = "PaperMod"
 
 # ビルド設定
 publishDir = "docs"
@@ -20,6 +20,7 @@ hasCJKLanguage = true
   description = "Working in Japanese multinational electronics company"
   images = ["img/og-image.jpg"]  # OGP画像（必要に応じて追加）
   dateFormat = "2006年01月02日"
+  customCSS = ["css/custom.css"]
 
 # ソーシャルメディア設定
 [params.social]
