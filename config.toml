@@ -2,7 +2,7 @@ baseURL = "https://tsudaidzuru.github.io/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
 title = "Working in Japanese multinational electronics company"
-theme = "Diary" 
+theme = "hugo-theme-techdoc" 
 
 # ビルド設定
 publishDir = "docs"
