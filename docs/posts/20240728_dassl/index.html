@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>20240728_dassl | Working in Japanese multinational electronics company</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Why are my Dymola calucluations better than OpenModelica? | Working in Japanese multinational electronics company</title>
 <meta name="keywords" content="MLOps, CAE, simulation, automotive">
-<meta name="description" content="DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL&rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL&rsquo;s core algorithm remains consistent, its">
+<meta name="description" content="This article is written by Gemini Deep Research. DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL&rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex">
 <meta name="author" content="">
-<link rel="canonical" href="https://tsudaidzuru.github.io/posts/20240728_dassl/">
+<link rel="canonical" href="http://localhost:1313/posts/20240728_dassl/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://tsudaidzuru.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://tsudaidzuru.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://tsudaidzuru.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://tsudaidzuru.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://tsudaidzuru.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="ja" href="https://tsudaidzuru.github.io/posts/20240728_dassl/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/20240728_dassl/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,78 +56,6 @@
 
     </style>
 </noscript>
-  
-
-<meta property="og:url" content="https://tsudaidzuru.github.io/posts/20240728_dassl/">
-  <meta property="og:site_name" content="Working in Japanese multinational electronics company">
-  <meta property="og:title" content="20240728_dassl">
-  <meta property="og:description" content="DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL’s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL’s core algorithm remains consistent, its">
-  <meta property="og:locale" content="ja-jp">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-28T15:30:45+09:00">
-    <meta property="article:modified_time" content="2024-07-28T15:30:45+09:00">
-    <meta property="article:tag" content="MLOps">
-    <meta property="article:tag" content="CAE">
-    <meta property="article:tag" content="Simulation">
-    <meta property="article:tag" content="Automotive">
-      <meta property="og:image" content="https://tsudaidzuru.github.io/img/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tsudaidzuru.github.io/img/og-image.jpg">
-<meta name="twitter:title" content="20240728_dassl">
-<meta name="twitter:description" content="DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL&rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL&rsquo;s core algorithm remains consistent, its">
-      <meta name="twitter:site" content="@TsudaIdzuru">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://tsudaidzuru.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "20240728_dassl",
-      "item": "https://tsudaidzuru.github.io/posts/20240728_dassl/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "20240728_dassl",
-  "name": "20240728_dassl",
-  "description": "DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL\u0026rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL\u0026rsquo;s core algorithm remains consistent, its",
-  "keywords": [
-    "MLOps", "CAE", "simulation", "automotive"
-  ],
-  "articleBody": "DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL’s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL’s core algorithm remains consistent, its implementation can differ significantly across software packages, leading to variations in stability and performance. This article delves into the implementation of DASSL in two popular modeling and simulation environments, Dymola and OpenModelica, investigating the potential reasons behind the observed performance differences.\nHistory and Background of DASSL DASSL was developed by Linda R. Petzold in the early 1980s to address the need for a robust solver for implicit systems of DAEs 1. Prior to DASSL, solving DAEs often required intricate mathematical manipulations to transform them into ordinary differential equations (ODEs), which could then be tackled by conventional ODE solvers. DASSL’s key innovation was its ability to directly handle DAEs in their implicit form, eliminating the need for these cumbersome transformations.\nThe algorithm’s core lies in employing backward differentiation formulas (BDFs) to approximate the derivatives in the DAE system. BDFs are implicit linear multi-step methods known for their stability when dealing with stiff systems, where solution components exhibit vastly different timescales. This characteristic makes DASSL particularly well-suited for simulating complex physical systems often encountered in engineering and scientific applications.\nDASSL in Dymola Dymola, a commercial modeling and simulation environment developed by Dassault Systèmes, has integrated DASSL as its default solver 4. Dymola leverages DASSL’s capabilities to handle both ODEs and DAEs 5. To solve these equations, Dymola employs a sophisticated approach involving symbolic preprocessing and numerical integration.\nBy default, Dymola uses an additional algebraic equation solver to handle the algebraic equations in a DAE system 6. This solver, often a Newton algorithm, iteratively computes the values of algebraic states, which are then passed to the ODE solver along with the differential equations. This process ensures a consistent solution for the coupled system of differential and algebraic equations.\nOne remarkable aspect of DASSL in Dymola is its flexibility in handling DAEs. DASSL offers two interfaces for simulation: it can work with an ODE description of the system (after symbolic transformation) or directly with a DAE description by setting Advance.Define.DAESolver=true 7. This dual-mode operation allows Dymola to adapt to different model structures and potentially optimize performance. When the DAE solver is enabled, the equations in the output and dynamics section of the model are not solved during calls to the model 7. This can be advantageous for models with large or numerous nonlinear equation systems, as it potentially reduces the number of nonlinear systems solved during the simulation.\nIn addition to the variable-step solvers like DASSL, Dymola also offers the possibility of using implicit solvers with a fixed step size 8. While fixed-step solvers might not be as adaptable to changing dynamics, they can be beneficial in specific scenarios where precise control over the time step is required.\nDASSL in OpenModelica OpenModelica, an open-source counterpart to Dymola, also incorporates DASSL as its default solver. The specific implementation used in OpenModelica is DASPK2.0, an advanced version of DASSL that has been automatically translated to C using the f2c tool 9. Like Dymola, OpenModelica typically transforms Modelica models into an ODE representation before applying numerical integration methods.\nOpenModelica handles DAEs by employing index reduction techniques and introducing dummy variables 11. These techniques aim to simplify the mathematical structure of the DAE system and facilitate numerical solution. However, the automatic introduction of dummy variables can sometimes influence the convergence of the nonlinear equation system, potentially affecting the solver’s stability.\nSimilar to Dymola, OpenModelica can also use DASSL to directly handle DAEs by setting Advanced.Define.DAESolver=true 7. This allows for greater flexibility in handling different types of models.\nOpenModelica provides several simulation flags to adjust the behavior of the DASSL solver 9. These flags offer fine-grained control over aspects such as Jacobian calculation (jacobian), root finding (noRootFinding), restarting (noRestart), initial step size (initialStepSize), maximum step size (maxStepSize), and maximum integration order (maxIntegrationOrder). This level of control allows users to tailor the solver’s behavior to specific simulation needs.\nIt’s worth noting that using a very short output interval in OpenModelica with DASSL can potentially lead to issues 13. This is because the output interval is used as a heuristic to determine some nominal step size and epsilon values, which might not be appropriate for all models.\nDespite sharing the same underlying algorithm, DASSL’s implementation in OpenModelica has been reported to exhibit lower stability compared to Dymola, particularly for specific models and simulation scenarios 14. This discrepancy might stem from several factors, including differences in the symbolic preprocessing techniques, event handling mechanisms, and the specific modifications or optimizations applied to the solver code.\nComparing DASSL Implementations While pinpointing the exact reasons for the performance variations between Dymola and OpenModelica requires further investigation and potentially access to the source code, several factors could contribute:\nSymbolic Preprocessing: Dymola and OpenModelica might employ different strategies for index reduction and symbolic manipulation of the equations. These variations could influence the structure and complexity of the resulting system, affecting the solver’s performance. Event Handling: Events, such as discrete changes in system parameters or state variables, can introduce discontinuities in the solution. The way events are detected and handled can significantly impact the solver’s stability. Dymola and OpenModelica might differ in their event detection algorithms or how they re-initialize the solver after an event. Solver Modifications: Both Dymola and OpenModelica might have incorporated specific modifications or optimizations to the original DASSL code to improve performance or address particular types of models. These modifications, while potentially beneficial in some cases, could introduce subtle differences in behavior and stability. Linear Algebra Routines: DASSL relies on linear algebra routines to solve systems of equations at each time step. The choice of these routines and their implementation can influence the solver’s efficiency and numerical stability. Dymola and OpenModelica might utilize different linear algebra libraries or have implemented these routines differently. Insights from Developers and Research Unfortunately, detailed insights from the developers of Dymola and OpenModelica regarding their DASSL implementation choices are limited 4. This lack of transparency from Dymola, in particular, makes it challenging to conduct a comprehensive comparison of the two implementations 5. However, some research papers and online discussions provide valuable clues. For instance, a study on simulation performance in Modelica environments highlights the importance of efficient code generation, event handling, and solver selection 17. Another study emphasizes the role of symbolic manipulation and index reduction in handling DAEs 12.\nConclusion DASSL remains a powerful tool for solving DAEs in various scientific and engineering applications. While its core algorithm provides a solid foundation, the specific implementation details can significantly influence its performance and stability. The observed differences between Dymola and OpenModelica likely stem from variations in symbolic preprocessing, event handling, solver modifications, and linear algebra routines. Further research and analysis are needed to fully understand these differences and provide definitive guidance on choosing the most suitable solver for a given application. It is important to acknowledge that the limited information available about Dymola’s DASSL implementation restricts the depth of this analysis and may impact the conclusions drawn.\nFurther Research To gain a deeper understanding of the performance variations of DASSL in Dymola and OpenModelica, the following research avenues could be explored:\nComparative Analysis: Conduct a systematic comparison of the DASSL implementations in Dymola and OpenModelica using a benchmark suite of DAE problems with varying stiffness and complexity. This analysis could involve: Profiling the solver’s execution time for each problem in the suite. Analyzing the stability behavior of the solver, particularly in the presence of events or discontinuities. Assessing the accuracy of the solutions obtained by each implementation for different problem types and tolerances. Source Code Examination: If access to the source code is possible, a detailed examination of the DASSL implementations in both environments could reveal: Specific modifications or optimizations applied to the original DASSL code. The choice of linear algebra routines and their implementation details. Differences in the strategies for symbolic preprocessing and index reduction. Developer Interviews: Conducting interviews with the developers of Dymola and OpenModelica could provide valuable insights into: The rationale behind their design choices for the DASSL implementation. Any specific challenges they faced during the development process. Their perspectives on the observed performance differences between the two environments. Sensitivity Analysis: Perform a sensitivity analysis to investigate how DASSL’s performance is affected by various simulation parameters, such as: Solver tolerances: Analyze how changes in relative and absolute tolerances influence the accuracy, stability, and execution time of the solver. Step sizes: Investigate the impact of different initial and maximum step sizes on the solver’s ability to capture the system dynamics and maintain stability. Event detection thresholds: Determine how variations in event detection thresholds affect the accuracy and efficiency of event handling. 引用文献 1. Description of DASSL: A Differential/Algebraic System Solver - UNT Digital Library, 1月 12, 2025にアクセス、 https://digital.library.unt.edu/ark:/67531/metadc1096787/\n2. 2*:A3vDescription of DASSL: A DifferentiaVAlgebraic System Solver - OSTI.GOV, 1月 12, 2025にアクセス、 https://www.osti.gov/servlets/purl/5882821\n3. dassl - Computational Science and Engineering Research Group, 1月 12, 2025にアクセス、 https://cse.cs.ucsb.edu/sites/default/files/publications/DASSL.pdf\n4. Quick guide to choosing a Solver (Integration Algorithm), Tolerance and Output Interval in Dymola - Claytex, 1月 12, 2025にアクセス、 https://www.claytex.com/tech-blog/quick-guide-to-choosing-a-solver-tolerance-and-output-interval-in-dymola/\n5. In Dymola to solve DAEs, why use the DASSL algorithm after performing the Patelides algorithm? - Stack Overflow, 1月 12, 2025にアクセス、 https://stackoverflow.com/questions/66124437/in-dymola-to-solve-daes-why-use-the-dassl-algorithm-after-performing-the-pateli\n6. Debugging in Dymola – Get the best out of your model - TLK Energy, 1月 12, 2025にアクセス、 https://tlk-energy.de/blog-en/debugging-dymola-nonlinear-equation-systems\n7. Solving Modelica Models — OpenModelica User’s Guide v1.13.0-dev.beta1 documentation, 1月 12, 2025にアクセス、 https://openmodelica.org/doc/OpenModelicaUsersGuide/v1.13.0-dev.beta1/solving.html\n8. Performance of inline integration in Dymola compared to normal calculation mode using DASSL - Stack Overflow, 1月 12, 2025にアクセス、 https://stackoverflow.com/questions/66178029/performance-of-inline-integration-in-dymola-compared-to-normal-calculation-mode\n9. Solving Modelica Models - OpenModelica, 1月 12, 2025にアクセス、 https://openmodelica.org/doc/OpenModelicaUsersGuide/latest/solving.html\n10. Solving Modelica Models — OpenModelica User’s Guide v1.16.0-dev.03 documentation, 1月 12, 2025にアクセス、 https://openmodelica.org/doc/OpenModelicaUsersGuide/beta1/solving.html\n11. OpenModelica inconsistent initial condistions for DAEs - Stack Overflow, 1月 12, 2025にアクセス、 https://stackoverflow.com/questions/76500522/openmodelica-inconsistent-initial-condistions-for-daes\n12. Event Handling in the OpenModelica Compiler and Runtime System - DiVA, 1月 12, 2025にアクセス、 http://liu.diva-portal.org/smash/get/diva2:67/FULLTEXT01.pdf\n13. Integrator issue on DASSL solver #10698 - GitHub, 1月 12, 2025にアクセス、 https://github.com/OpenModelica/OpenModelica/issues/10698\n14. DASSL solver in OpenModelica and Dymola - Stack Overflow, 1月 12, 2025にアクセス、 https://stackoverflow.com/questions/28632261/dassl-solver-in-openmodelica-and-dymola\n15. Solving Modelica Models - OpenModelica, 1月 12, 2025にアクセス、 https://openmodelica.org/doc/OpenModelicaUsersGuide/v1.9.3/solving.html\n16. OpenModelica User’s Guide, 1月 12, 2025にアクセス、 https://openmodelica.org/doc/OpenModelicaUsersGuide/OpenModelicaUsersGuide-1.21.pdf\n17. Simulation Speed Analysis and Improvements of Modelica Models for Building Energy Simulation Filip Jorissen. Michael Wetter, Li - OSTI.GOV, 1月 12, 2025にアクセス、 https://www.osti.gov/servlets/purl/1249560\n",
-  "wordCount" : "1940",
-  "inLanguage": "ja",
-  "image": "https://tsudaidzuru.github.io/img/og-image.jpg","datePublished": "2024-07-28T15:30:45+09:00",
-  "dateModified": "2024-07-28T15:30:45+09:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://tsudaidzuru.github.io/posts/20240728_dassl/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Working in Japanese multinational electronics company",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://tsudaidzuru.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -145,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://tsudaidzuru.github.io/" accesskey="h" title="Working in Japanese multinational electronics company (Alt + H)">Working in Japanese multinational electronics company</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Working in Japanese multinational electronics company (Alt + H)">Working in Japanese multinational electronics company</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -171,22 +99,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://tsudaidzuru.github.io/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://tsudaidzuru.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://tsudaidzuru.github.io/tech/" title="Tech">
-                    <span>Tech</span>
+                <a href="http://localhost:1313/tech/" title="Techs">
+                    <span>Techs</span>
                 </a>
             </li>
             <li>
-                <a href="https://tsudaidzuru.github.io/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -199,13 +127,14 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      20240728_dassl
+      Why are my Dymola calucluations better than OpenModelica?
     </h1>
     <div class="post-meta"><span title='2024-07-28 15:30:45 +0900 JST'>2024年07月28日</span>
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="dassl-a-deep-dive-into-implementation-and-performance-variations-in-dymola-and-openmodelica"><strong>DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica</strong><a hidden class="anchor" aria-hidden="true" href="#dassl-a-deep-dive-into-implementation-and-performance-variations-in-dymola-and-openmodelica">#</a></h1>
+  <div class="post-content"><p>This article is written by Gemini Deep Research.</p>
+<h1 id="dassl-a-deep-dive-into-implementation-and-performance-variations-in-dymola-and-openmodelica"><strong>DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica</strong><a hidden class="anchor" aria-hidden="true" href="#dassl-a-deep-dive-into-implementation-and-performance-variations-in-dymola-and-openmodelica">#</a></h1>
 <p>DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL&rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL&rsquo;s core algorithm remains consistent, its implementation can differ significantly across software packages, leading to variations in stability and performance. This article delves into the implementation of DASSL in two popular modeling and simulation environments, Dymola and OpenModelica, investigating the potential reasons behind the observed performance differences.</p>
 <h2 id="history-and-background-of-dassl"><strong>History and Background of DASSL</strong><a hidden class="anchor" aria-hidden="true" href="#history-and-background-of-dassl">#</a></h2>
 <p>DASSL was developed by Linda R. Petzold in the early 1980s to address the need for a robust solver for implicit systems of DAEs 1. Prior to DASSL, solving DAEs often required intricate mathematical manipulations to transform them into ordinary differential equations (ODEs), which could then be tackled by conventional ODE solvers. DASSL&rsquo;s key innovation was its ability to directly handle DAEs in their implicit form, eliminating the need for these cumbersome transformations.</p>
@@ -290,17 +219,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://tsudaidzuru.github.io/tags/mlops/">MLOps</a></li>
-      <li><a href="https://tsudaidzuru.github.io/tags/cae/">CAE</a></li>
-      <li><a href="https://tsudaidzuru.github.io/tags/simulation/">Simulation</a></li>
-      <li><a href="https://tsudaidzuru.github.io/tags/automotive/">Automotive</a></li>
+      <li><a href="http://localhost:1313/tags/mlops/">MLOps</a></li>
+      <li><a href="http://localhost:1313/tags/cae/">CAE</a></li>
+      <li><a href="http://localhost:1313/tags/simulation/">Simulation</a></li>
+      <li><a href="http://localhost:1313/tags/automotive/">Automotive</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://tsudaidzuru.github.io/">Working in Japanese multinational electronics company</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Working in Japanese multinational electronics company</a></span> · 
 
     <span>
         Powered by

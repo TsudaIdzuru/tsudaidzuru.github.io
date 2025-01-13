@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Working in Japanese multinational electronics company</title>
-    <link>https://tsudaidzuru.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Working in Japanese multinational electronics company</description>
     <image>
       <title>Working in Japanese multinational electronics company</title>
-      <url>https://tsudaidzuru.github.io/img/og-image.jpg</url>
-      <link>https://tsudaidzuru.github.io/img/og-image.jpg</link>
+      <url>http://localhost:1313/img/og-image.jpg</url>
+      <link>http://localhost:1313/img/og-image.jpg</link>
     </image>
     <generator>Hugo -- 0.130.0</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tsudaidzuru.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 10:38:19 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automotive</title>
-      <link>https://tsudaidzuru.github.io/tags/automotive/</link>
-      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/automotive/</guid>
+      <link>http://localhost:1313/tags/automotive/</link>
+      <pubDate>Mon, 13 Jan 2025 10:38:19 +0900</pubDate>
+      <guid>http://localhost:1313/tags/automotive/</guid>
       <description></description>
     </item>
     <item>
       <title>CAE</title>
-      <link>https://tsudaidzuru.github.io/tags/cae/</link>
-      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/cae/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CFD</title>
-      <link>https://tsudaidzuru.github.io/tags/cfd/</link>
-      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/cfd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DevOps</title>
-      <link>https://tsudaidzuru.github.io/tags/devops/</link>
-      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MLOps</title>
-      <link>https://tsudaidzuru.github.io/tags/mlops/</link>
-      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/mlops/</guid>
+      <link>http://localhost:1313/tags/cae/</link>
+      <pubDate>Mon, 13 Jan 2025 10:38:19 +0900</pubDate>
+      <guid>http://localhost:1313/tags/cae/</guid>
       <description></description>
     </item>
     <item>
       <title>Simulation</title>
-      <link>https://tsudaidzuru.github.io/tags/simulation/</link>
+      <link>http://localhost:1313/tags/simulation/</link>
+      <pubDate>Mon, 13 Jan 2025 10:38:19 +0900</pubDate>
+      <guid>http://localhost:1313/tags/simulation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CFD</title>
+      <link>http://localhost:1313/tags/cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tsudaidzuru.github.io/tags/simulation/</guid>
+      <guid>http://localhost:1313/tags/cfd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MLOps</title>
+      <link>http://localhost:1313/tags/mlops/</link>
+      <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mlops/</guid>
       <description></description>
     </item>
   </channel>

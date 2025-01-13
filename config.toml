@@ -37,7 +37,7 @@ hasCJKLanguage = true
     url = "/posts/"
     weight = 2
   [[menu.main]]
-    name = "Tech"
+    name = "Techs"
     url = "/tech/"
     weight = 2
   [[menu.main]]
