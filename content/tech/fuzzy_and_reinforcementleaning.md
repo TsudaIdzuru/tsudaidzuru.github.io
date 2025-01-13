@@ -256,7 +256,7 @@ plt.title('Fuzzy vs. RL Temperature Control')
 plt.legend()
 plt.grid(True)
 plt.show()
-
+```
 
 
 ### 4.2. Discussion of This Example
