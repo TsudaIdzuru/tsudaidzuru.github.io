@@ -80,7 +80,7 @@ This post provides a detailed comparison between **Fuzzy-Logic Control (FLC)** a
 
 ### Simulation Overview
 - **System**: Single-zone thermal system.
-- **Goal**: Maintain temperature \(T\) around a setpoint \(T_{\text{set}}\).
+- **Goal**: Maintain temperature $\(T\)$ around a setpoint $\(T_{\text{set}}\)$.
 - **Control Inputs**: Heater power between 0 (off) and 1 (full on).
 
 ### Python Code
