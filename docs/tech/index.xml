@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Teches on Working in Japanese multinational electronics company</title>
-    <link>http://localhost:1313/tech/</link>
+    <link>http://localhost:64064/tech/</link>
     <description>Recent content in Teches on Working in Japanese multinational electronics company</description>
     <image>
       <title>Working in Japanese multinational electronics company</title>
-      <url>http://localhost:1313/img/og-image.jpg</url>
-      <link>http://localhost:1313/img/og-image.jpg</link>
+      <url>http://localhost:64064/img/og-image.jpg</url>
+      <link>http://localhost:64064/img/og-image.jpg</link>
     </image>
     <generator>Hugo -- 0.130.0</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 13 Jan 2025 10:38:19 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64064/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Performance between Fuzzy-logic control and reinforcement learning?</title>
-      <link>http://localhost:1313/tech/fuzzy_and_reinforcementleaning/</link>
+      <link>http://localhost:64064/tech/fuzzy_and_reinforcementleaning/</link>
       <pubDate>Mon, 13 Jan 2025 10:38:19 +0900</pubDate>
-      <guid>http://localhost:1313/tech/fuzzy_and_reinforcementleaning/</guid>
-      <description>Here is my question. Could you please clarify if there is a distinction in performance between Fuzzy-logic control and reinforcement learning? As a home appliance control engineer, I am interested in understanding the differences between these two approaches. Fuzzy-logic control operates home appliances based on the predefined rules and logic established by human engineers. In contrast, reinforcement learning controls home appliances based on the rules and behaviors determined by Q-learning and other algorithms.</description>
+      <guid>http://localhost:64064/tech/fuzzy_and_reinforcementleaning/</guid>
+      <description>Here is my question. Could you please clarify if there is a distinction in performance between Fuzzy-logic control and reinforcement learning? As a home appliance control engineer, I am interested in understanding the differences between these two approaches. Fuzzy-logic control operates home appliances based on the predefined rules and logic established by human engineers. In contrast, reinforcement learning controls home appliances based on the rules and behaviors determined by Q-learning</description>
     </item>
     <item>
       <title>BEV Battery Simulation Technology: Classification, Issues, and Applications</title>
-      <link>http://localhost:1313/tech/bev_battery_simulation/</link>
+      <link>http://localhost:64064/tech/bev_battery_simulation/</link>
       <pubDate>Sat, 11 Jan 2025 16:53:45 +0900</pubDate>
-      <guid>http://localhost:1313/tech/bev_battery_simulation/</guid>
+      <guid>http://localhost:64064/tech/bev_battery_simulation/</guid>
       <description>This article is written by Gemini Deep Research. BEV Battery Simulation Technology: Classification, Issues, and Applications Introduction The automotive industry is undergoing a revolution, with battery electric vehicles (BEVs) at the forefront of this transformation. As BEVs gain traction, the demand for high-performance, safe, and long-lasting batteries has surged. These batteries are some of the best current technologies for vehicle operation, offering significant advantages over traditional internal combustion engines1. However,</description>
     </item>
     <item>
       <title>Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing</title>
-      <link>http://localhost:1313/tech/devops_for_cfd/</link>
+      <link>http://localhost:64064/tech/devops_for_cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tech/devops_for_cfd/</guid>
+      <guid>http://localhost:64064/tech/devops_for_cfd/</guid>
       <description>This article is written by Gemini Deep Research.
 Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:
 Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?</description>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=64064&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Performance between Fuzzy-logic control and reinforcement learning? | Working in Japanese multinational electronics company</title>
 <meta name="keywords" content="CAE, simulation, automotive">
-<meta name="description" content="Here is my question. Could you please clarify if there is a distinction in performance between Fuzzy-logic control and reinforcement learning? As a home appliance control engineer, I am interested in understanding the differences between these two approaches. Fuzzy-logic control operates home appliances based on the predefined rules and logic established by human engineers. In contrast, reinforcement learning controls home appliances based on the rules and behaviors determined by Q-learning and other algorithms.">
+<meta name="description" content="Here is my question. Could you please clarify if there is a distinction in performance between Fuzzy-logic control and reinforcement learning? As a home appliance control engineer, I am interested in understanding the differences between these two approaches. Fuzzy-logic control operates home appliances based on the predefined rules and logic established by human engineers. In contrast, reinforcement learning controls home appliances based on the rules and behaviors determined by Q-learning">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tech/fuzzy_and_reinforcementleaning/">
+<link rel="canonical" href="http://localhost:64064/tech/fuzzy_and_reinforcementleaning/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:64064/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:64064/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:64064/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:64064/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:64064/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="ja" href="http://localhost:1313/tech/fuzzy_and_reinforcementleaning/">
+<link rel="alternate" hreflang="ja" href="http://localhost:64064/tech/fuzzy_and_reinforcementleaning/">
 <noscript>
     <style>
         #theme-toggle,
@@ -73,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Working in Japanese multinational electronics company (Alt + H)">Working in Japanese multinational electronics company</a>
+            <a href="http://localhost:64064/" accesskey="h" title="Working in Japanese multinational electronics company (Alt + H)">Working in Japanese multinational electronics company</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,22 +99,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="http://localhost:64064/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="Posts">
+                <a href="http://localhost:64064/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tech/" title="Techs">
+                <a href="http://localhost:64064/tech/" title="Techs">
                     <span>Techs</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About">
+                <a href="http://localhost:64064/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -138,150 +138,254 @@
 Are Fuzzy-logic control and reinforcement learning merely equivalent in terms of performance? Is there any research or methodology available that assesses the stability and robustness of these two controls in relation to control theory?
 Could you please specify the type of plant for which the two controls exhibit a difference in performance? If feasible, compose a script in Python or MATLAB to compare the performance of the two controls.</p>
 <p>Below is GPT-o1&rsquo;s answer.</p>
-<h1 id="comparing-fuzzy-logic-control-and-reinforcement-learning-a-comprehensive-overview">Comparing Fuzzy-Logic Control and Reinforcement Learning: A Comprehensive Overview<a hidden class="anchor" aria-hidden="true" href="#comparing-fuzzy-logic-control-and-reinforcement-learning-a-comprehensive-overview">#</a></h1>
-<p>This post provides a detailed comparison between <strong>Fuzzy-Logic Control (FLC)</strong> and <strong>Reinforcement Learning (RL)</strong>, covering:</p>
+<h1 id="fuzzy-logic-control-vs-reinforcement-learning">Fuzzy-Logic Control vs. Reinforcement Learning<a hidden class="anchor" aria-hidden="true" href="#fuzzy-logic-control-vs-reinforcement-learning">#</a></h1>
+<p>Below is a reasonably comprehensive overview of how Fuzzy-logic control and Reinforcement Learning (RL) compare, including:</p>
 <ol>
 <li>Conceptual differences in design and performance.</li>
-<li>Key control-theoretic considerations like stability and robustness.</li>
-<li>An example scenario (simple temperature control) to compare the two approaches.</li>
-<li>A Python script to illustrate performance differences.</li>
+<li>Key control-theoretic considerations such as stability and robustness.</li>
+<li>An example scenario (simple temperature control) where we compare the two approaches.</li>
+<li>A short Python script to illustrate performance comparisons.</li>
 </ol>
 <hr>
 <h2 id="1-conceptual-differences">1. Conceptual Differences<a hidden class="anchor" aria-hidden="true" href="#1-conceptual-differences">#</a></h2>
 <h3 id="fuzzy-logic-control">Fuzzy-Logic Control<a hidden class="anchor" aria-hidden="true" href="#fuzzy-logic-control">#</a></h3>
 <ul>
-<li><strong>Human Knowledge Embedded</strong>: Relies heavily on domain experts to specify membership functions, fuzzy sets, and rules (IF–THEN).</li>
-<li><strong>Rule-Based</strong>: Intuitive and derived from practical experience or heuristics.</li>
-<li><strong>Handles Uncertainty Well</strong>: Suitable for linguistic or approximate information.</li>
-<li><strong>Stability</strong>: Depends on fuzzy rules and defuzzification methods. Stability proofs can be complex but achievable using methods like Lyapunov-based approaches.</li>
+<li><strong>Human Knowledge Embedded</strong>: Fuzzy logic controllers (FLCs) rely heavily on human experts or domain engineers to specify membership functions, fuzzy sets, and rules (IF–THEN rules).</li>
+<li><strong>Rule-Based</strong>: Rules are derived from practical experience or heuristics, which can make them intuitive to understand and maintain.</li>
+<li><strong>Good for Uncertain Environments</strong>: Fuzzy control inherently handles linguistic or approximate information.</li>
+<li><strong>Stability</strong>: The stability of a fuzzy controller typically depends on the structure of the fuzzy rules and the defuzzification method. As with any nonlinear system, formal proof of stability can be more involved, but well-established methods exist (e.g., using Lyapunov-based approaches or the concept of sliding-mode fuzzy controllers).</li>
 </ul>
 <h3 id="reinforcement-learning">Reinforcement Learning<a hidden class="anchor" aria-hidden="true" href="#reinforcement-learning">#</a></h3>
 <ul>
-<li><strong>Data-Driven</strong>: Learns policies by interacting with the environment to maximize rewards.</li>
-<li><strong>Minimal Domain Knowledge</strong>: Requires less explicit human-defined rules but needs carefully designed reward functions and state representations.</li>
-<li><strong>Exploration vs. Exploitation</strong>: Balances testing new actions with leveraging known strategies.</li>
-<li><strong>Stability &amp; Robustness</strong>: Stability is a research challenge. Modern approaches (e.g., Lyapunov-based reward shaping) are improving but not as mature as classical methods.</li>
+<li><strong>Data-Driven</strong>: Reinforcement learning (RL) learns policies from interaction with the environment. The controller “discovers” strategies that maximize rewards (or minimize costs).</li>
+<li><strong>Less Domain Knowledge</strong>: RL can learn behaviors without requiring explicit human-defined rules, but may need carefully shaped reward functions, state representations, etc.</li>
+<li><strong>Exploration vs. Exploitation</strong>: RL algorithms (Q-learning, Deep Q-Networks, policy gradient methods, etc.) balance exploring untried actions with exploiting known-good actions.</li>
+<li><strong>Stability &amp; Robustness</strong>: Proving formal stability of an RL-based controller is an active area of research. Traditional control theory often demands well-defined mathematical models, whereas RL is more experimental and data-driven. Some recent works attempt to provide stability guarantees (e.g., through Lyapunov-based reward shaping or constrained policy optimization), but these are not as mature as classical control design methods.</li>
 </ul>
 <hr>
-<h2 id="2-performance-comparison-key-factors">2. Performance Comparison: Key Factors<a hidden class="anchor" aria-hidden="true" href="#2-performance-comparison-key-factors">#</a></h2>
-<h3 id="nature-of-the-plant">Nature of the Plant<a hidden class="anchor" aria-hidden="true" href="#nature-of-the-plant">#</a></h3>
+<h2 id="2-are-they-equivalent-in-performance">2. Are They Equivalent in Performance?<a hidden class="anchor" aria-hidden="true" href="#2-are-they-equivalent-in-performance">#</a></h2>
+<p>Fuzzy-logic control and reinforcement learning are <strong>not inherently equivalent</strong> in performance. The choice depends greatly on:</p>
+<ol>
+<li>
+<p><strong>Nature of the Plant</strong></p>
 <ul>
-<li><strong>Nonlinear Plants</strong>: Fuzzy controllers excel with human insight, while RL performs well with sufficient data and safe exploration.</li>
+<li>Highly nonlinear plants with limited or uncertain models can sometimes be more naturally handled by fuzzy controllers (using human-engineered insight) or by RL (if you have enough data and the ability to do explorations safely).</li>
 </ul>
-<h3 id="data-availability--safety-constraints">Data Availability &amp; Safety Constraints<a hidden class="anchor" aria-hidden="true" href="#data-availability--safety-constraints">#</a></h3>
+</li>
+<li>
+<p><strong>Data Availability &amp; Safety Constraints</strong></p>
 <ul>
-<li>Low-cost trial environments favor RL. High-stakes applications favor more predictable methods like Fuzzy or PID.</li>
+<li>In some applications (e.g., home appliances), the cost of trial and error might be low enough to allow RL to learn effectively. In other contexts (e.g., high-stakes industrial systems), an unsafe action by an RL controller might be too costly or dangerous, favoring more predictable methods like fuzzy or classical PID.</li>
 </ul>
-<h3 id="task-complexity">Task Complexity<a hidden class="anchor" aria-hidden="true" href="#task-complexity">#</a></h3>
+</li>
+<li>
+<p><strong>Complexity of the Task</strong></p>
 <ul>
-<li><strong>Simple Tasks</strong>: Fuzzy logic is quick and effective.</li>
-<li><strong>Complex Tasks</strong>: RL adapts and excels in changing or multi-state environments.</li>
+<li>If the task is relatively simple and well understood, a fuzzy rule-based system might achieve good performance very quickly without requiring training time.</li>
+<li>If the environment is complex (multiple states, changing conditions), RL may outperform a fixed rule-based approach because it continually adapts.</li>
 </ul>
-<h3 id="stability-and-robustness">Stability and Robustness<a hidden class="anchor" aria-hidden="true" href="#stability-and-robustness">#</a></h3>
+</li>
+<li>
+<p><strong>Stability and Robustness</strong></p>
 <ul>
-<li>Fuzzy controllers achieve robust performance through careful tuning.</li>
-<li>RL robustness depends on training data and adaptability.</li>
+<li>Fuzzy logic can be tuned for robust performance if the rule base is carefully designed.</li>
+<li>RL controllers may or may not be robust, depending on how they are trained and whether they have encountered enough variations in the environment.</li>
+</ul>
+</li>
+</ol>
+<h3 id="research--methodologies-for-assessment">Research &amp; Methodologies for Assessment<a hidden class="anchor" aria-hidden="true" href="#research--methodologies-for-assessment">#</a></h3>
+<ul>
+<li><strong>Lyapunov Stability</strong>: Researchers use Lyapunov-based approaches to prove or at least empirically demonstrate stable performance under fuzzy or RL-based controllers.</li>
+<li><strong>$( H_{\infty} )$ and $( \mu )$-Synthesis</strong>: Traditional robust control methods have been combined with fuzzy logic in “fuzzy robust control” or with RL in “robust RL.”</li>
+<li><strong>ISO Standard Approaches / Benchmarking</strong>: For home appliances, sometimes the performance is compared by measuring standard metrics (like temperature overshoot, settling time, energy consumption, etc.). RL and fuzzy control can be tested side-by-side for the same reference tracking tasks.</li>
 </ul>
 <hr>
-<h2 id="3-use-cases-and-plant-types">3. Use Cases and Plant Types<a hidden class="anchor" aria-hidden="true" href="#3-use-cases-and-plant-types">#</a></h2>
-<h3 id="linear-well-understood-plants">Linear, Well-Understood Plants<a hidden class="anchor" aria-hidden="true" href="#linear-well-understood-plants">#</a></h3>
+<h2 id="3-types-of-plants-where-performance-differ">3. Types of Plants Where Performance Differ<a hidden class="anchor" aria-hidden="true" href="#3-types-of-plants-where-performance-differ">#</a></h2>
+<ol>
+<li>
+<p><strong>Linear, Well-Understood Plants</strong></p>
 <ul>
-<li>Classical PID or linear fuzzy systems often suffice.</li>
-<li>RL offers marginal improvements but requires more training.</li>
+<li>Classical (PID or linear fuzzy) vs. RL might not yield much advantage for RL if the plant is simple.</li>
+<li>RL might require longer training but yield comparable or slightly better performance if there is some unmodeled nonlinearity.</li>
 </ul>
-<h3 id="nonlinear-multi-input-multi-output-mimo-plants">Nonlinear, Multi-Input, Multi-Output (MIMO) Plants<a hidden class="anchor" aria-hidden="true" href="#nonlinear-multi-input-multi-output-mimo-plants">#</a></h3>
+</li>
+<li>
+<p><strong>Highly Nonlinear, Multi-Input, Multi-Output (MIMO) Plants</strong></p>
 <ul>
-<li>Fuzzy: Rules grow complex as input dimensions increase.</li>
-<li>RL: Handles high-dimensional spaces but is computationally expensive.</li>
+<li><em>Fuzzy</em>: The complexity of rules can explode combinatorially as the dimension of input/outputs grows.</li>
+<li><em>RL</em>: Can handle multi-dimensional spaces more flexibly (especially with deep RL), but training might be expensive.</li>
 </ul>
-<h3 id="time-varying-or-uncertain-plants">Time-Varying or Uncertain Plants<a hidden class="anchor" aria-hidden="true" href="#time-varying-or-uncertain-plants">#</a></h3>
+</li>
+<li>
+<p><strong>Plants with Changing Dynamics (time-varying or uncertain)</strong></p>
 <ul>
-<li>Fuzzy: Needs re-tuning for drastic changes.</li>
-<li>RL: Adapts continuously if allowed iterative updates.</li>
+<li><em>Fuzzy</em>: Requires re-tuning or an adaptive fuzzy approach if the plant changes drastically.</li>
+<li><em>RL</em>: If continuous learning or iterative updates are allowed, it can adapt to changes without rewriting rules manually.</li>
 </ul>
+</li>
+</ol>
+<p>For home appliance control, you often have relatively well-bounded systems (like HVAC temperature control, washing machine drum speed, refrigerator thermodynamics, etc.). RL might help optimize for energy usage or user comfort over time but can require more careful training. Fuzzy can be straightforward and rely on known heuristics (e.g., “If temperature is high and humidity is high, do X”).</p>
 <hr>
-<h2 id="4-example-temperature-control">4. Example: Temperature Control<a hidden class="anchor" aria-hidden="true" href="#4-example-temperature-control">#</a></h2>
-<h3 id="simulation-overview">Simulation Overview<a hidden class="anchor" aria-hidden="true" href="#simulation-overview">#</a></h3>
+<h2 id="4-a-simple-example-temperature-control">4. A Simple Example: Temperature Control<a hidden class="anchor" aria-hidden="true" href="#4-a-simple-example-temperature-control">#</a></h2>
+<p>Below is a simplified example that compares a fuzzy-logic controller and a Q-learning controller in Python. We simulate a single-zone thermal system:</p>
 <ul>
-<li><strong>System</strong>: Single-zone thermal system.</li>
-<li><strong>Goal</strong>: Maintain temperature (T) around a setpoint (T_{\text{set}}).</li>
-<li><strong>Control Inputs</strong>: Heater power between 0 (off) and 1 (full on).</li>
+<li>$( T(k) )$ is the zone temperature at step $( k )$.</li>
+<li>$( T_{ambient} )$ is the ambient temperature (assumed constant for simplicity).</li>
+<li>$( u(k) )$ is a control input representing heater power (0 = off, 1 = full on).</li>
+<li>$( \alpha )$ is a gain factor that captures heating effectiveness and heat losses.</li>
 </ul>
-<h3 id="python-code">Python Code<a hidden class="anchor" aria-hidden="true" href="#python-code">#</a></h3>
-<p>Below is a simplified example illustrating fuzzy-logic and Q-learning controllers.</p>
+<p>We define a setpoint $( T_{set} )$. The controller’s goal is to maintain $( T(k) )$ around $( T_{set} )$.</p>
+<h3 id="41-python-script-outline">4.1. Python Script Outline<a hidden class="anchor" aria-hidden="true" href="#41-python-script-outline">#</a></h3>
+<blockquote>
+<p><strong>Note</strong>: This example is purely illustrative. In practice, you would use libraries such as <a href="https://pypi.org/project/scikit-fuzzy/">scikit-fuzzy</a> for fuzzy logic and <a href="https://stable-baselines.readthedocs.io/">Stable Baselines</a> or <a href="https://docs.ray.io/en/latest/rllib/index.html">Ray RLlib</a> for RL. Here, we show a toy code snippet to convey the ideas.</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> numpy <span style="color:#ff79c6">as</span> np
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> matplotlib.pyplot <span style="color:#ff79c6">as</span> plt
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Simulation Parameters</span>
-</span></span><span style="display:flex;"><span>N_STEPS <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">200</span>
-</span></span><span style="display:flex;"><span>T_AMBIENT <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20.0</span>  <span style="color:#6272a4"># Ambient temperature (°C)</span>
-</span></span><span style="display:flex;"><span>T_SETPOINT <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">40.0</span>  <span style="color:#6272a4"># Desired setpoint (°C)</span>
-</span></span><span style="display:flex;"><span>ALPHA <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.1</span>
-</span></span><span style="display:flex;"><span>DELTA_T <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.0</span>
-</span></span><span style="display:flex;"><span>INITIAL_TEMP <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 1. SIMULATION PARAMETERS</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span>N_STEPS <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">200</span>              <span style="color:#6272a4"># Simulation steps</span>
+</span></span><span style="display:flex;"><span>T_AMBIENT <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20.0</span>           <span style="color:#6272a4"># Ambient temperature [°C]</span>
+</span></span><span style="display:flex;"><span>T_SETPOINT <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">40.0</span>          <span style="color:#6272a4"># Desired setpoint [°C]</span>
+</span></span><span style="display:flex;"><span>ALPHA <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.1</span>                <span style="color:#6272a4"># Heating/cooling dynamic parameter</span>
+</span></span><span style="display:flex;"><span>DELTA_T <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.0</span>              <span style="color:#6272a4"># Time step (in arbitrary units)</span>
+</span></span><span style="display:flex;"><span>INITIAL_TEMP <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20.0</span>        <span style="color:#6272a4"># Starting temperature</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Fuzzy Controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. FUZZY-LOGIC CONTROLLER (Simple Example)</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># We&#39;ll code a simple manual fuzzy logic that sets heater power</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># based on error and rate of change of error. In real usage,</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># membership functions and fuzzy inference would be more systematic.</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">fuzzy_controller</span>(T, T_set, T_dot):
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    T: current temperature
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    T_set: setpoint
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    T_dot: rate of temperature change (approx.)
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    Returns heater power between 0 and 1
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    &#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    error <span style="color:#ff79c6">=</span> T_set <span style="color:#ff79c6">-</span> T
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Simple fuzzy sets for the error</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Negative, Small, Large, ...</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> error <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">5</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># If the error is large positive, turn heater on full</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1.0</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> error <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">2</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Moderate heating</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.6</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> error <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0.5</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Lower heating</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.3</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> error <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Overheated -&gt; turn heater off</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.0</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">elif</span> T_dot <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.2</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Very small error -&gt; depends on whether temperature is dropping or rising</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> T_dot <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4"># if temp is going down, add a little heat</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0.0</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Q-Learning Controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. Q-LEARNING CONTROLLER</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># For a simple demonstration, we discretize the temperature space</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># and learn a Q-table: Q(state, action) -&gt; value</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># We&#39;ll define discrete states: T in [20..50], step of 1 deg</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Actions: [0, 0.2, 0.4, 0.6, 0.8, 1.0]</span>
 </span></span><span style="display:flex;"><span>temp_min, temp_max <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">20</span>, <span style="color:#bd93f9">50</span>
 </span></span><span style="display:flex;"><span>actions <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>linspace(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">6</span>)
 </span></span><span style="display:flex;"><span>num_states <span style="color:#ff79c6">=</span> temp_max <span style="color:#ff79c6">-</span> temp_min <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>
-</span></span><span style="display:flex;"><span>Q <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>zeros((num_states, <span style="color:#8be9fd;font-style:italic">len</span>(actions)))
+</span></span><span style="display:flex;"><span>num_actions <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">len</span>(actions)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Q <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>zeros((num_states, num_actions))
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_state</span>(T):
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">int</span>(np<span style="color:#ff79c6">.</span>clip(T, temp_min, temp_max)) <span style="color:#ff79c6">-</span> temp_min
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># clip temperature to [temp_min, temp_max]</span>
+</span></span><span style="display:flex;"><span>    clipped <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">int</span>(np<span style="color:#ff79c6">.</span>clip(T, temp_min, temp_max))
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> clipped <span style="color:#ff79c6">-</span> temp_min
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Training Parameters</span>
-</span></span><span style="display:flex;"><span>EPISODES, GAMMA, ALPHA_Q <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">300</span>, <span style="color:#bd93f9">0.95</span>, <span style="color:#bd93f9">0.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">choose_action</span>(state, eps<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.1</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Epsilon-greedy policy</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>rand() <span style="color:#ff79c6">&lt;</span> eps:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>randint(num_actions)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> np<span style="color:#ff79c6">.</span>argmax(Q[state])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">reward_function</span>(T, T_set):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># A simple negative absolute error reward</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic">abs</span>(T_set <span style="color:#ff79c6">-</span> T)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Training parameters</span>
+</span></span><span style="display:flex;"><span>EPISODES <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">300</span>
+</span></span><span style="display:flex;"><span>GAMMA <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.95</span>
+</span></span><span style="display:flex;"><span>ALPHA_Q <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.1</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> episode <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(EPISODES):
-</span></span><span style="display:flex;"><span>    T_current, state <span style="color:#ff79c6">=</span> INITIAL_TEMP, get_state(INITIAL_TEMP)
+</span></span><span style="display:flex;"><span>    T_current <span style="color:#ff79c6">=</span> INITIAL_TEMP
+</span></span><span style="display:flex;"><span>    state <span style="color:#ff79c6">=</span> get_state(T_current)
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> step <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(N_STEPS):
-</span></span><span style="display:flex;"><span>        action_idx <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>argmax(Q[state]) <span style="color:#ff79c6">if</span> np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>rand() <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0.2</span> <span style="color:#ff79c6">else</span> np<span style="color:#ff79c6">.</span>random<span style="color:#ff79c6">.</span>randint(<span style="color:#8be9fd;font-style:italic">len</span>(actions))
+</span></span><span style="display:flex;"><span>        action_idx <span style="color:#ff79c6">=</span> choose_action(state, eps<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0.2</span>)
 </span></span><span style="display:flex;"><span>        heater_power <span style="color:#ff79c6">=</span> actions[action_idx]
-</span></span><span style="display:flex;"><span>        T_next <span style="color:#ff79c6">=</span> T_current <span style="color:#ff79c6">+</span> ALPHA <span style="color:#ff79c6">*</span> (heater_power <span style="color:#ff79c6">-</span> (T_current <span style="color:#ff79c6">-</span> T_AMBIENT)) <span style="color:#ff79c6">*</span> DELTA_T
-</span></span><span style="display:flex;"><span>        reward <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#8be9fd;font-style:italic">abs</span>(T_SETPOINT <span style="color:#ff79c6">-</span> T_next)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># simulate one step</span>
+</span></span><span style="display:flex;"><span>        T_next <span style="color:#ff79c6">=</span> T_current <span style="color:#ff79c6">+</span> ALPHA<span style="color:#ff79c6">*</span>(heater_power <span style="color:#ff79c6">-</span> (T_current <span style="color:#ff79c6">-</span> T_AMBIENT))<span style="color:#ff79c6">*</span>DELTA_T
+</span></span><span style="display:flex;"><span>        reward <span style="color:#ff79c6">=</span> reward_function(T_next, T_SETPOINT)
 </span></span><span style="display:flex;"><span>        next_state <span style="color:#ff79c6">=</span> get_state(T_next)
-</span></span><span style="display:flex;"><span>        Q[state, action_idx] <span style="color:#ff79c6">+=</span> ALPHA_Q <span style="color:#ff79c6">*</span> (reward <span style="color:#ff79c6">+</span> GAMMA <span style="color:#ff79c6">*</span> np<span style="color:#ff79c6">.</span>max(Q[next_state]) <span style="color:#ff79c6">-</span> Q[state, action_idx])
-</span></span><span style="display:flex;"><span>        T_current, state <span style="color:#ff79c6">=</span> T_next, next_state
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># Q-learning update</span>
+</span></span><span style="display:flex;"><span>        best_next_action <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>argmax(Q[next_state])
+</span></span><span style="display:flex;"><span>        Q[state, action_idx] <span style="color:#ff79c6">+=</span> ALPHA_Q <span style="color:#ff79c6">*</span> (reward <span style="color:#ff79c6">+</span> GAMMA <span style="color:#ff79c6">*</span> Q[next_state, best_next_action] <span style="color:#ff79c6">-</span> Q[state, action_idx])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4"># transition</span>
+</span></span><span style="display:flex;"><span>        T_current <span style="color:#ff79c6">=</span> T_next
+</span></span><span style="display:flex;"><span>        state <span style="color:#ff79c6">=</span> next_state
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Compare Controllers</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. Evaluate Performance</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
 </span></span><span style="display:flex;"><span>time <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>arange(N_STEPS)
-</span></span><span style="display:flex;"><span>temp_fuzzy, temp_rl <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>zeros(N_STEPS), np<span style="color:#ff79c6">.</span>zeros(N_STEPS)
-</span></span><span style="display:flex;"><span>T_curr <span style="color:#ff79c6">=</span> INITIAL_TEMP
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, N_STEPS):
-</span></span><span style="display:flex;"><span>    T_dot <span style="color:#ff79c6">=</span> (temp_fuzzy[i<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">-</span> temp_fuzzy[i<span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>]) <span style="color:#ff79c6">if</span> i <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">else</span> <span style="color:#bd93f9">0</span>
-</span></span><span style="display:flex;"><span>    u_fuzzy <span style="color:#ff79c6">=</span> fuzzy_controller(T_curr, T_SETPOINT, T_dot)
-</span></span><span style="display:flex;"><span>    T_next <span style="color:#ff79c6">=</span> T_curr <span style="color:#ff79c6">+</span> ALPHA <span style="color:#ff79c6">*</span> (u_fuzzy <span style="color:#ff79c6">-</span> (T_curr <span style="color:#ff79c6">-</span> T_AMBIENT)) <span style="color:#ff79c6">*</span> DELTA_T
-</span></span><span style="display:flex;"><span>    temp_fuzzy[i], T_curr <span style="color:#ff79c6">=</span> T_next, T_next
+</span></span><span style="display:flex;"><span>temp_fuzzy <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>zeros(N_STEPS)
+</span></span><span style="display:flex;"><span>temp_rl <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>zeros(N_STEPS)
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># (a) Fuzzy run</span>
 </span></span><span style="display:flex;"><span>T_curr <span style="color:#ff79c6">=</span> INITIAL_TEMP
+</span></span><span style="display:flex;"><span>temp_fuzzy[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">=</span> T_curr
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, N_STEPS):
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># Approx. derivative of temperature</span>
+</span></span><span style="display:flex;"><span>    T_dot <span style="color:#ff79c6">=</span> (temp_fuzzy[i<span style="color:#ff79c6">-</span><span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">-</span> temp_fuzzy[i<span style="color:#ff79c6">-</span><span style="color:#bd93f9">2</span>]) <span style="color:#ff79c6">if</span> i<span style="color:#ff79c6">&gt;</span><span style="color:#bd93f9">1</span> <span style="color:#ff79c6">else</span> <span style="color:#bd93f9">0.0</span>
+</span></span><span style="display:flex;"><span>    u_fuzzy <span style="color:#ff79c6">=</span> fuzzy_controller(T_curr, T_SETPOINT, T_dot)
+</span></span><span style="display:flex;"><span>    T_next <span style="color:#ff79c6">=</span> T_curr <span style="color:#ff79c6">+</span> ALPHA<span style="color:#ff79c6">*</span>(u_fuzzy <span style="color:#ff79c6">-</span> (T_curr <span style="color:#ff79c6">-</span> T_AMBIENT))<span style="color:#ff79c6">*</span>DELTA_T
+</span></span><span style="display:flex;"><span>    temp_fuzzy[i] <span style="color:#ff79c6">=</span> T_next
+</span></span><span style="display:flex;"><span>    T_curr <span style="color:#ff79c6">=</span> T_next
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># (b) RL run</span>
+</span></span><span style="display:flex;"><span>T_curr <span style="color:#ff79c6">=</span> INITIAL_TEMP
+</span></span><span style="display:flex;"><span>temp_rl[<span style="color:#bd93f9">0</span>] <span style="color:#ff79c6">=</span> T_curr
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> i <span style="color:#ff79c6">in</span> <span style="color:#8be9fd;font-style:italic">range</span>(<span style="color:#bd93f9">1</span>, N_STEPS):
 </span></span><span style="display:flex;"><span>    state <span style="color:#ff79c6">=</span> get_state(T_curr)
-</span></span><span style="display:flex;"><span>    u_rl <span style="color:#ff79c6">=</span> actions[np<span style="color:#ff79c6">.</span>argmax(Q[state])]
-</span></span><span style="display:flex;"><span>    T_next <span style="color:#ff79c6">=</span> T_curr <span style="color:#ff79c6">+</span> ALPHA <span style="color:#ff79c6">*</span> (u_rl <span style="color:#ff79c6">-</span> (T_curr <span style="color:#ff79c6">-</span> T_AMBIENT)) <span style="color:#ff79c6">*</span> DELTA_T
-</span></span><span style="display:flex;"><span>    temp_rl[i], T_curr <span style="color:#ff79c6">=</span> T_next, T_next
+</span></span><span style="display:flex;"><span>    action_idx <span style="color:#ff79c6">=</span> np<span style="color:#ff79c6">.</span>argmax(Q[state])  <span style="color:#6272a4"># best action from Q-learning</span>
+</span></span><span style="display:flex;"><span>    u_rl <span style="color:#ff79c6">=</span> actions[action_idx]
+</span></span><span style="display:flex;"><span>    T_next <span style="color:#ff79c6">=</span> T_curr <span style="color:#ff79c6">+</span> ALPHA<span style="color:#ff79c6">*</span>(u_rl <span style="color:#ff79c6">-</span> (T_curr <span style="color:#ff79c6">-</span> T_AMBIENT))<span style="color:#ff79c6">*</span>DELTA_T
+</span></span><span style="display:flex;"><span>    temp_rl[i] <span style="color:#ff79c6">=</span> T_next
+</span></span><span style="display:flex;"><span>    T_curr <span style="color:#ff79c6">=</span> T_next
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># Plot Results</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 5. Plot results</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ----------------------------------------</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>figure(figsize<span style="color:#ff79c6">=</span>(<span style="color:#bd93f9">10</span>,<span style="color:#bd93f9">6</span>))
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>plot(time, temp_fuzzy, label<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Fuzzy Controller&#39;</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>plot(time, temp_rl, label<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Q-Learning Controller&#39;</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>axhline(T_SETPOINT, color<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;r&#39;</span>, linestyle<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;--&#39;</span>, label<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Setpoint&#39;</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>xlabel(<span style="color:#f1fa8c">&#39;Time Steps&#39;</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>ylabel(<span style="color:#f1fa8c">&#39;Temperature (°C)&#39;</span>)
-</span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>legend()
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>title(<span style="color:#f1fa8c">&#39;Fuzzy vs. RL Temperature Control&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>legend()
+</span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>grid(<span style="color:#ff79c6">True</span>)
 </span></span><span style="display:flex;"><span>plt<span style="color:#ff79c6">.</span>show()
 </span></span></code></pre></div>
 
@@ -289,16 +393,16 @@ Could you please specify the type of plant for which the two controls exhibit a 
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/cae/">CAE</a></li>
-      <li><a href="http://localhost:1313/tags/simulation/">Simulation</a></li>
-      <li><a href="http://localhost:1313/tags/automotive/">Automotive</a></li>
+      <li><a href="http://localhost:64064/tags/cae/">CAE</a></li>
+      <li><a href="http://localhost:64064/tags/simulation/">Simulation</a></li>
+      <li><a href="http://localhost:64064/tags/automotive/">Automotive</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Working in Japanese multinational electronics company</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:64064/">Working in Japanese multinational electronics company</a></span> · 
 
     <span>
         Powered by
@@ -366,6 +470,38 @@ Could you please specify the type of plant for which the two controls exhibit a 
     })
 
 </script>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+  integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+  integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+    });
+  });
+</script>
+
 </body>
 
 </html>
