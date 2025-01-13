@@ -2,12 +2,16 @@
 title: "Performance between Fuzzy-logic control and reinforcement learning?"
 date: 2025-01-13T10:38:19+09:00
 cover:
-    images:
-        - "fuzzy_RL.png" # サムネイル画像のパス
+    image: images/fuzzy_vs_RL.png # image path/url
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: false # only hide on current single page
 categories: [ "CAE","Manufacturing"]
 tags: ["CAE", "simulation", "automotive"]
 draft: false
 ---
+
 
 # Here is my question.
 
