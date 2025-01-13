@@ -2,25 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Simulation on Working in Japanese multinational electronics company</title>
-    <link>http://localhost:1313/tags/simulation/</link>
+    <link>https://tsudaidzuru.github.io/tags/simulation/</link>
     <description>Recent content in Simulation on Working in Japanese multinational electronics company</description>
     <image>
       <title>Working in Japanese multinational electronics company</title>
-      <url>http://localhost:1313/img/og-image.jpg</url>
-      <link>http://localhost:1313/img/og-image.jpg</link>
+      <url>https://tsudaidzuru.github.io/img/og-image.jpg</url>
+      <link>https://tsudaidzuru.github.io/img/og-image.jpg</link>
     </image>
     <generator>Hugo -- 0.130.0</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tsudaidzuru.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Applying DevOps and MLOps to CAE and CFD: Enhancing Simulation Workflows in Manufacturing</title>
-      <link>http://localhost:1313/tech/devops_for_cfd/</link>
+      <link>https://tsudaidzuru.github.io/tech/devops_for_cfd/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tech/devops_for_cfd/</guid>
+      <guid>https://tsudaidzuru.github.io/tech/devops_for_cfd/</guid>
       <description>This article is written by Gemini Deep Research.
 Introduction In the rapidly evolving landscape of product development, Continuous Integration and Continuous Deployment (CI/CD) practices have become integral to enhancing efficiency and collaboration. This has led many to explore the applicability of DevOps and MLOps methodologies beyond traditional software and machine learning projects. A pressing question in this realm is:
 Can DevOps and MLOps methodologies be applied to Computational Fluid Dynamics (CFD) and Computer-Aided Engineering (CAE)?</description>
+    </item>
+    <item>
+      <title>20240728_dassl</title>
+      <link>https://tsudaidzuru.github.io/posts/20240728_dassl/</link>
+      <pubDate>Sun, 28 Jul 2024 15:30:45 +0900</pubDate>
+      <guid>https://tsudaidzuru.github.io/posts/20240728_dassl/</guid>
+      <description>DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL&amp;rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL&amp;rsquo;s core algorithm remains consistent, its</description>
     </item>
   </channel>
 </rss>

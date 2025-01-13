@@ -2,37 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Working in Japanese multinational electronics company</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://tsudaidzuru.github.io/posts/</link>
     <description>Recent content in Posts on Working in Japanese multinational electronics company</description>
     <image>
       <title>Working in Japanese multinational electronics company</title>
-      <url>http://localhost:1313/img/og-image.jpg</url>
-      <link>http://localhost:1313/img/og-image.jpg</link>
+      <url>https://tsudaidzuru.github.io/img/og-image.jpg</url>
+      <link>https://tsudaidzuru.github.io/img/og-image.jpg</link>
     </image>
     <generator>Hugo -- 0.130.0</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 28 Jul 2024 15:30:45 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tsudaidzuru.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>20240728_dassl</title>
-      <link>http://localhost:1313/posts/20240728_dassl/</link>
+      <link>https://tsudaidzuru.github.io/posts/20240728_dassl/</link>
       <pubDate>Sun, 28 Jul 2024 15:30:45 +0900</pubDate>
-      <guid>http://localhost:1313/posts/20240728_dassl/</guid>
-      <description>DASSL is one of the most successful simulation codes on the market today. It implements the BDF formulae of orders one to five in their DAE format, as presented earlier in this chapter. DASSL is a variable-step, variable- order code that uses order buildup during the startup period. The code was written by Linda Petzold [8.4, 8.34].
-The code has meanwhile been made the default simulator in Dymola. [8.9, 8.</description>
+      <guid>https://tsudaidzuru.github.io/posts/20240728_dassl/</guid>
+      <description>DASSL: A Deep Dive into Implementation and Performance Variations in Dymola and OpenModelica DASSL (Differential/Algebraic System Solver) is a numerical algorithm widely used for solving differential/algebraic equations (DAEs). These equations arise in various scientific and engineering domains, including modeling physical systems, chemical reactions, and control systems. DASSL&amp;rsquo;s ability to handle both ODEs and DAEs makes it a versatile tool for simulating complex systems. While DASSL&amp;rsquo;s core algorithm remains consistent, its</description>
     </item>
     <item>
       <title>配属ガチャ ～新卒が引き当てる運命の一手～</title>
-      <link>http://localhost:1313/posts/new-recuits-gacha-game/</link>
+      <link>https://tsudaidzuru.github.io/posts/new-recuits-gacha-game/</link>
       <pubDate>Mon, 10 Oct 2022 21:57:26 +0900</pubDate>
-      <guid>http://localhost:1313/posts/new-recuits-gacha-game/</guid>
+      <guid>https://tsudaidzuru.github.io/posts/new-recuits-gacha-game/</guid>
       <description>配属ガチャ ～新卒が引き当てる運命の一手～ 日本の多くの企業では、新卒採用が一般的です。その後のキャリアの土台を築く「最初の配属先」は、まさに運</description>
     </item>
     <item>
       <title>This is what I want to do</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>https://tsudaidzuru.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 10 Oct 2022 21:27:17 +0900</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://tsudaidzuru.github.io/posts/my-first-post/</guid>
       <description>自己紹介 日本の総合電機メーカーで働いています。 このブログでは、日本の総合電機メーカーの中で思ったことを書き残してます。</description>
     </item>
   </channel>
