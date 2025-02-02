@@ -3,6 +3,7 @@ languageCode = "ja-jp"
 defaultContentLanguage = "ja"
 title = "Working in Japanese multinational electronics company"
 theme = "PaperMod"
+googleAnalytics = "G-5CSX1GTYZX"
 
 # ビルド設定
 publishDir = "docs"
@@ -63,3 +64,11 @@ hasCJKLanguage = true
     style = "dracula"
   [markup.goldmark.renderer]
     unsafe = true
+    
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
